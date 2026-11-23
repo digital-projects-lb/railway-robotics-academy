@@ -1,0 +1,2259 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Railway Robotics Academy | Junior Engineer Prep</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=11" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <svg width="28" height="22" viewBox="0 0 64 50" aria-hidden="true">
+          <rect x="6" y="12" width="16" height="24" rx="3" fill="#1d4ed8" />
+          <rect x="20" y="20" width="26" height="16" rx="3" fill="#2563eb" />
+          <polygon points="36,20 44,20 43,10 37,10" fill="#1e293b" />
+          <polygon points="46,36 54,41 46,41" fill="#ef4444" />
+          <circle
+            cx="15"
+            cy="40"
+            r="6"
+            fill="#334155"
+            stroke="#f59e0b"
+            stroke-width="2"
+          />
+          <circle
+            cx="30"
+            cy="41"
+            r="5"
+            fill="#334155"
+            stroke="#f59e0b"
+            stroke-width="2"
+          />
+          <circle
+            cx="42"
+            cy="41"
+            r="5"
+            fill="#334155"
+            stroke="#f59e0b"
+            stroke-width="2"
+          />
+        </svg>
+        <span>Railway Robotics Academy</span>
+      </div>
+
+      <nav class="week-tabs" id="weekTabs">
+        <button class="tab-btn active" onclick="goToSlide(0)">
+          Start (Today's Demo)
+        </button>
+        <button class="tab-btn" onclick="goToSlide(1)">Wk 1: Robotics</button>
+        <button class="tab-btn" onclick="goToSlide(2)">Wk 2: Scratch</button>
+        <button class="tab-btn" onclick="goToSlide(3)">
+          Wk 3: Electricity
+        </button>
+        <button class="tab-btn" onclick="goToSlide(4)">Wk 4: Crossing</button>
+        <button class="tab-btn" onclick="goToSlide(5)">Wk 5: Sound AI</button>
+        <button class="tab-btn" onclick="goToSlide(6)">Wk 6: Camp Ready</button>
+        <button class="tab-btn bonus-tab" onclick="goToSlide(7)">
+          🚀 Projects
+        </button>
+        <button class="tab-btn bonus-tab" onclick="goToSlide(8)">
+          📚 Resources
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- SLIDE 0: WELCOME & TODAY'S LIVE DEMO -->
+      <section class="slide active">
+        <div class="split-layout">
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Today's Kickoff • Real Hardware Demo</span>
+              <h1>All Aboard, Junior AI Train Engineer!</h1>
+              <p>
+                Real train engines use temperature and distance sensors to keep
+                motors from overheating. Today, let's test our real
+                <strong>Temperature-Controlled Fan & Sensor System</strong>!
+              </p>
+              <div class="teacher-note">
+                <strong>👩🏾‍🏫 2-Min Mini-Lecture (Read or Paraphrase):</strong>
+                <ul>
+                  <li>
+                    <strong>What we are looking at:</strong> "This is a real
+                    <strong>Arduino Uno</strong> robot brain wired to a
+                    breadboard—real sensors, real wires, and real code!"
+                  </li>
+                  <li>
+                    <strong>How it reacts to temperature:</strong> "A
+                    temperature sensor checks the air:
+                    <strong>Blue LED</strong> = Cold,
+                    <strong>Green LED</strong> = Normal, and when it gets
+                    <strong>Hot</strong>, the <strong>Red LED</strong> lights up
+                    and turns on the
+                    <strong>Cooling Fan</strong> automatically!"
+                  </li>
+                  <li>
+                    <strong>Train connection & Yellow Light Hook:</strong> "Real
+                    train engines use cooling systems just like this so motors
+                    don't overheat. And once we learn circuits and code, you'll
+                    know how to swap that green light for your
+                    <strong>yellow</strong> light!"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 1: Test the Smart Cooling System (Today • 15 mins)</h3>
+              <ul>
+                <li>
+                  <strong>Cold / Normal:</strong> Watch the
+                  <strong>Blue</strong> (cold) and
+                  <strong>Green</strong> (normal) status lights.
+                </li>
+                <li>
+                  <strong>Hot Alert:</strong> When temperature rises, the
+                  <strong>Red LED</strong> switches on and starts the
+                  <strong>Servo Cooling Fan</strong>!
+                </li>
+                <li>
+                  <strong>Bonus Sensor:</strong> Wave your hand in front of the
+                  silver <strong>Ultrasonic Eyes</strong> to test distance
+                  sensing too.
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 2: Our 6-Week Track Ahead (45 mins/wk)</h3>
+              <p>
+                Over the next 6 weeks, you'll learn <strong>Robotics</strong>,
+                <strong>Scratch Train Coding</strong>,
+                <strong>Electricity</strong>, <strong>Railway Circuits</strong>,
+                and <strong>Sound AI</strong> at your own pace.
+              </p>
+            </div>
+
+            <div class="box-card hint-box">
+              <h3>💡 Hints</h3>
+              <p>
+                Notice the cardboard mounts holding the parts? Real engineers
+                build quick cardboard prototypes first before making final
+                parts!
+              </p>
+            </div>
+          </div>
+
+          <div class="rhs-stage">
+            <svg
+              viewBox="0 0 280 190"
+              aria-label="Blue and gold steam train puffing steam over green grass"
+            >
+              <circle
+                cx="198"
+                cy="36"
+                r="9"
+                fill="#94a3b8"
+                class="chimney-steam-1"
+              />
+              <circle
+                cx="198"
+                cy="36"
+                r="12"
+                fill="#cbd5e1"
+                class="chimney-steam-2"
+              />
+              <circle
+                cx="198"
+                cy="36"
+                r="15"
+                fill="#e2e8f0"
+                class="chimney-steam-3"
+              />
+
+              <g class="train-chug">
+                <rect
+                  x="44"
+                  y="42"
+                  width="68"
+                  height="78"
+                  rx="8"
+                  fill="#1d4ed8"
+                />
+                <rect
+                  x="38"
+                  y="36"
+                  width="80"
+                  height="8"
+                  rx="4"
+                  fill="#f59e0b"
+                />
+                <rect
+                  x="58"
+                  y="54"
+                  width="40"
+                  height="28"
+                  rx="5"
+                  fill="#bae6fd"
+                />
+                <rect
+                  x="106"
+                  y="65"
+                  width="110"
+                  height="55"
+                  rx="10"
+                  fill="#2563eb"
+                />
+                <rect
+                  x="122"
+                  y="75"
+                  width="75"
+                  height="10"
+                  rx="5"
+                  fill="#60a5fa"
+                />
+                <polygon points="188,65 208,65 204,40 192,40" fill="#1e293b" />
+                <rect
+                  x="186"
+                  y="36"
+                  width="24"
+                  height="5"
+                  rx="2"
+                  fill="#f59e0b"
+                />
+                <circle
+                  cx="218"
+                  cy="85"
+                  r="6"
+                  fill="#fef08a"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                />
+                <polygon points="216,120 242,135 216,135" fill="#ef4444" />
+                <rect
+                  x="38"
+                  y="118"
+                  width="184"
+                  height="14"
+                  rx="5"
+                  fill="#1e293b"
+                />
+              </g>
+
+              <g class="wheel-spin">
+                <circle
+                  cx="78"
+                  cy="135"
+                  r="22"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="4"
+                />
+                <line
+                  x1="78"
+                  y1="113"
+                  x2="78"
+                  y2="157"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                />
+                <line
+                  x1="56"
+                  y1="135"
+                  x2="100"
+                  y2="135"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="138"
+                  cy="138"
+                  r="18"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="4"
+                />
+                <line
+                  x1="138"
+                  y1="120"
+                  x2="138"
+                  y2="156"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                />
+                <line
+                  x1="120"
+                  y1="138"
+                  x2="156"
+                  y2="138"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="188"
+                  cy="138"
+                  r="18"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="4"
+                />
+                <line
+                  x1="188"
+                  y1="120"
+                  x2="188"
+                  y2="156"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                />
+                <line
+                  x1="170"
+                  y1="138"
+                  x2="206"
+                  y2="138"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                />
+              </g>
+
+              <rect
+                x="0"
+                y="162"
+                width="280"
+                height="28"
+                rx="6"
+                fill="#10b981"
+              />
+              <path
+                d="M25,162 Q30,152 35,162 M95,162 Q100,150 105,162 M235,162 Q240,151 245,162"
+                stroke="#047857"
+                stroke-width="3"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <line
+                x1="10"
+                y1="160"
+                x2="270"
+                y2="160"
+                stroke="#475569"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <p class="caption">
+              Full Steam Ahead! Every smart train needs Sensors + Code + Motors.
+            </p>
+            <p class="sub-caption">
+              Tap <strong>Next →</strong> below to continue.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 1: WEEK 1 ROBOTICS & ENGINEERING -->
+      <section class="slide">
+        <div class="split-layout">
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Week 1 • 45 Mins • Guide</span>
+              <h1>Robotics & Engineering Foundations</h1>
+              <p>
+                Smart machines follow a 3-step loop (<strong
+                  >Input → Brain → Output</strong
+                >) every second without human common sense.
+              </p>
+              <div class="teacher-note">
+                <strong>👩🏾‍🏫 2-Min Mini-Lecture: What is an Algorithm?</strong>
+                <ul>
+                  <li>
+                    <strong>Plain English:</strong> "An
+                    <strong>algorithm</strong> is simply a step-by-step recipe
+                    of instructions. Making toast is an algorithm: 1. Put bread
+                    in toaster, 2. Push lever down, 3. Wait for pop, 4. Spread
+                    butter."
+                  </li>
+                  <li>
+                    <strong>Why order matters:</strong> "If you do step 4 before
+                    step 1, it doesn't work! Computers follow recipes in exact
+                    order and cannot guess what you meant."
+                  </li>
+                  <li>
+                    <strong>Practical intro:</strong> "Today I am a robot with
+                    zero common sense—you have to give me the exact recipe to
+                    pick up that cup!"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 1: The "Literal Train" Game (25 mins)</h3>
+              <ul>
+                <li>
+                  One person is a steam train with
+                  <strong>zero common sense</strong>.
+                </li>
+                <li>
+                  Give exact commands: <em>"Chug forward 3 steps"</em>,
+                  <em>"Turn right"</em>, <em>"Open hand"</em>,
+                  <em>"Apply brakes"</em>.
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 2: Household Sensor Hunt (20 mins)</h3>
+              <p>
+                Spot the <strong>Input → Brain → Output</strong> on 3 machines
+                at home (e.g., automatic sliding door, fridge light, toaster).
+              </p>
+            </div>
+
+            <div class="box-card hint-box">
+              <h3>💡 Hints</h3>
+              <p>
+                <strong>Stuck on the Hunt?</strong> Look at your fridge door!
+                Opening the door releases a little button
+                (<strong>Input</strong>) that turns on the light
+                (<strong>Output</strong>).
+              </p>
+            </div>
+          </div>
+
+          <div class="rhs-stage">
+            <svg
+              viewBox="0 0 600 180"
+              aria-label="Input Brain Output Robotics Loop"
+            >
+              <rect
+                x="10"
+                y="30"
+                width="155"
+                height="100"
+                rx="16"
+                fill="#dbeafe"
+                stroke="#2563eb"
+                stroke-width="3"
+              />
+              <text
+                x="87"
+                y="72"
+                text-anchor="middle"
+                font-weight="bold"
+                fill="#1e3a8a"
+                font-size="18"
+              >
+                1. INPUT
+              </text>
+              <text
+                x="87"
+                y="98"
+                text-anchor="middle"
+                fill="#2563eb"
+                font-size="14"
+              >
+                Sensors & Switches
+              </text>
+
+              <line
+                x1="170"
+                y1="80"
+                x2="220"
+                y2="80"
+                stroke="#94a3b8"
+                stroke-width="4"
+                stroke-dasharray="6,6"
+              />
+              <circle
+                cx="195"
+                cy="80"
+                r="7"
+                fill="#f59e0b"
+                class="data-flow-1"
+              />
+
+              <rect
+                x="225"
+                y="30"
+                width="155"
+                height="100"
+                rx="16"
+                fill="#fef3c7"
+                stroke="#f59e0b"
+                stroke-width="3"
+              />
+              <text
+                x="302"
+                y="72"
+                text-anchor="middle"
+                font-weight="bold"
+                fill="#78350f"
+                font-size="18"
+              >
+                2. BRAIN
+              </text>
+              <text
+                x="302"
+                y="98"
+                text-anchor="middle"
+                fill="#b45309"
+                font-size="14"
+              >
+                Code & Rules
+              </text>
+
+              <line
+                x1="385"
+                y1="80"
+                x2="435"
+                y2="80"
+                stroke="#94a3b8"
+                stroke-width="4"
+                stroke-dasharray="6,6"
+              />
+              <circle
+                cx="410"
+                cy="80"
+                r="7"
+                fill="#10b981"
+                class="data-flow-2"
+              />
+
+              <rect
+                x="440"
+                y="30"
+                width="150"
+                height="100"
+                rx="16"
+                fill="#d1fae5"
+                stroke="#10b981"
+                stroke-width="3"
+              />
+              <text
+                x="515"
+                y="72"
+                text-anchor="middle"
+                font-weight="bold"
+                fill="#064e3b"
+                font-size="18"
+              >
+                3. OUTPUT
+              </text>
+              <text
+                x="515"
+                y="98"
+                text-anchor="middle"
+                fill="#047857"
+                font-size="14"
+              >
+                Motors & Lights
+              </text>
+            </svg>
+            <p class="caption">The Universal Robotics Loop</p>
+            <p class="sub-caption">
+              Every robot—from a Sydney Metro train to a Mars Rover—uses these 3
+              steps.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: WEEK 2 SCRATCH -->
+      <section class="slide">
+        <div class="split-layout">
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Week 2 • 45 Mins • Guide</span>
+              <h1>Scratch Level-Crossing Train</h1>
+              <p>
+                Code a steam train that drives along the tracks, blows its
+                whistle, and stops automatically at red signals.
+              </p>
+              <div class="teacher-note">
+                <strong>👩🏾‍🏫 2-Min Mini-Lecture: How Code Makes Decisions</strong>
+                <ul>
+                  <li>
+                    <strong>Events (Yellow blocks):</strong> "These are the
+                    'When' triggers—like pressing a doorbell. When you press the
+                    right arrow, the train wakes up."
+                  </li>
+                  <li>
+                    <strong>Forever Loops (Orange):</strong> "Robots don't check
+                    their sensors once and go to sleep—a
+                    <code>forever</code> loop makes the train check the track
+                    hundreds of times every second."
+                  </li>
+                  <li>
+                    <strong>If / Then:</strong> "This is how a train thinks:
+                    <em>IF</em> touching red signal, <em>THEN</em> apply the
+                    brakes!"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 1: Train Throttle & Whistle (25 mins)</h3>
+              <ul>
+                <li>
+                  <strong>Events (Yellow):</strong>
+                  <code>when [right arrow] key pressed</code>
+                </li>
+                <li>
+                  <strong>Motion (Blue):</strong>
+                  <code>point in direction (90)</code> +
+                  <code>move (10) steps</code>
+                </li>
+                <li>
+                  Add <strong>Left (-90)</strong>, plus
+                  <code>when [space] key pressed</code> →
+                  <code>play sound [train whistle]</code>.
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 2: Automatic Red Signal Brake (20 mins)</h3>
+              <ul>
+                <li>
+                  Draw a <strong>Red Signal Light</strong> sprite on the track
+                  ahead.
+                </li>
+                <li>
+                  Use <strong>Control (Orange):</strong> <code>forever</code> +
+                  <code>if &lt;touching Signal?&gt; then</code>
+                </li>
+                <li>
+                  Say <code>"Red Signal! Stopping!"</code> and bounce back
+                  <code>-15 steps</code>.
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card hint-box">
+              <h3>💡 Hints</h3>
+              <p>
+                <strong>Train flipped upside down?</strong> Click
+                <em>Direction</em> below the stage and tap the middle
+                <strong>Left/Right (↔)</strong> icon. Save at home via
+                <em>File → Save to your computer</em>.
+              </p>
+            </div>
+          </div>
+
+          <div class="rhs-stage">
+            <svg
+              viewBox="0 0 320 190"
+              aria-label="Scratch Train Simulator Preview"
+            >
+              <rect
+                x="10"
+                y="15"
+                width="300"
+                height="145"
+                rx="14"
+                fill="#ffffff"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <rect x="260" y="65" width="8" height="70" fill="#334155" />
+              <rect
+                x="252"
+                y="50"
+                width="24"
+                height="34"
+                rx="6"
+                fill="#1e293b"
+              />
+              <circle
+                cx="264"
+                cy="67"
+                r="7"
+                fill="#ef4444"
+                class="signal-flash"
+              />
+              <g class="train-chug">
+                <rect
+                  x="55"
+                  y="85"
+                  width="32"
+                  height="38"
+                  rx="4"
+                  fill="#1d4ed8"
+                />
+                <rect
+                  x="85"
+                  y="96"
+                  width="55"
+                  height="27"
+                  rx="5"
+                  fill="#2563eb"
+                />
+                <polygon points="124,96 134,96 132,82 126,82" fill="#1e293b" />
+                <circle
+                  cx="72"
+                  cy="127"
+                  r="8"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="102"
+                  cy="127"
+                  r="7"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="126"
+                  cy="127"
+                  r="7"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                />
+              </g>
+              <rect
+                x="65"
+                y="34"
+                width="165"
+                height="26"
+                rx="8"
+                fill="#fef3c7"
+                stroke="#f59e0b"
+                stroke-width="1.5"
+              />
+              <text
+                x="147"
+                y="52"
+                text-anchor="middle"
+                font-weight="bold"
+                fill="#78350f"
+                font-size="12"
+              >
+                Red Signal! Auto-Braking!
+              </text>
+              <line
+                x1="20"
+                y1="136"
+                x2="300"
+                y2="136"
+                stroke="#64748b"
+                stroke-width="4"
+              />
+            </svg>
+            <a
+              href="https://scratch.mit.edu/projects/editor/"
+              target="_blank"
+              rel="noopener"
+              class="big-btn green-btn"
+            >
+              🚀 Open Scratch Editor Directly ↗
+            </a>
+            <p class="sub-caption">
+              Direct link: <code>scratch.mit.edu/projects/editor/</code> (No
+              login needed)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: WEEK 3 ELECTRICITY (GLASS LIGHT GLOBE) -->
+      <section class="slide">
+        <div class="split-layout">
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Week 3 • 45 Mins • Guide</span>
+              <h1>Electricity & Complete Circuits</h1>
+              <p>
+                Electricity flows around a closed wire loop—just like a train
+                running around a circular railway track!
+              </p>
+              <div class="teacher-note">
+                <strong>👩🏾‍🏫 2-Min Mini-Lecture: What is Electricity?</strong>
+                <ul>
+                  <li>
+                    <strong>What it is:</strong> "Electricity is the flow of
+                    tiny invisible particles called
+                    <strong>electrons</strong> zooming through metal wires—just
+                    like water flowing through a garden hose."
+                  </li>
+                  <li>
+                    <strong>4 Key Parts:</strong> 1)
+                    <strong>Battery</strong> (the pump pushing electrons), 2)
+                    <strong>Wires</strong> (the pipes), 3)
+                    <strong>Switch</strong> (a tap that opens or breaks the
+                    circle), and 4) <strong>Light Globe / Motor</strong> (the
+                    part that does the work!).
+                  </li>
+                  <li>
+                    <strong>Golden Rule:</strong> "Electrons only move in a
+                    complete circle from <code>+</code> back to <code>-</code>."
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 1: 3 Golden Rules of Electricity (25 mins)</h3>
+              <ul>
+                <li>
+                  <strong>Closed Loop:</strong> If a wire breaks anywhere, the
+                  light globe goes out immediately.
+                </li>
+                <li>
+                  <strong>Conductors vs. Insulators:</strong> Copper & foil let
+                  electricity flow; plastic & rubber block it safely.
+                </li>
+                <li>
+                  <strong>Resistors:</strong> Slow down electrical pressure
+                  (<strong>Voltage</strong>) so tiny bulbs don't blow!
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 2: Conductor or Insulator Game (20 mins)</h3>
+              <p>
+                Look around the room and name 3
+                <strong>Conductors</strong> (metal spoon, coins, foil) and 3
+                <strong>Insulators</strong> (wooden ruler, rubber eraser,
+                plastic cup).
+              </p>
+            </div>
+
+            <div class="box-card hint-box">
+              <h3>💡 Hints</h3>
+              <p>
+                <strong>Safety First:</strong> Never touch wall power
+                points—engineers only test circuits using small batteries or
+                safe screen simulators!
+              </p>
+            </div>
+          </div>
+
+          <div class="rhs-stage">
+            <svg
+              viewBox="0 0 250 185"
+              aria-label="Closed electrical circuit with glowing yellow glass light globe"
+            >
+              <rect
+                x="20"
+                y="58"
+                width="38"
+                height="65"
+                rx="6"
+                fill="#1e293b"
+              />
+              <rect x="30" y="51" width="18" height="7" rx="2" fill="#f59e0b" />
+              <text
+                x="39"
+                y="83"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-weight="bold"
+                font-size="14"
+              >
+                +
+              </text>
+              <text
+                x="39"
+                y="111"
+                text-anchor="middle"
+                fill="#94a3b8"
+                font-weight="bold"
+                font-size="14"
+              >
+                -
+              </text>
+              <polyline
+                points="39,51 39,25 185,25 185,48"
+                fill="none"
+                stroke="#ef4444"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <polyline
+                points="39,123 39,150 185,150 185,114"
+                fill="none"
+                stroke="#334155"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+
+              <circle
+                cx="185"
+                cy="76"
+                r="32"
+                fill="#fef08a"
+                class="globe-glow"
+              />
+              <path
+                d="M165,76 A20,20 0 1,1 205,76 C205,88 196,92 195,100 L175,100 C174,92 165,88 165,76 Z"
+                fill="#fef9c3"
+                stroke="#eab308"
+                stroke-width="2.5"
+              />
+              <polyline
+                points="179,98 179,78 182,73 185,78 188,73 191,78 191,98"
+                fill="none"
+                stroke="#d97706"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="174"
+                y="100"
+                width="22"
+                height="12"
+                rx="3"
+                fill="#94a3b8"
+                stroke="#475569"
+                stroke-width="1.5"
+              />
+              <line
+                x1="174"
+                y1="104"
+                x2="196"
+                y2="104"
+                stroke="#475569"
+                stroke-width="1.5"
+              />
+              <line
+                x1="174"
+                y1="108"
+                x2="196"
+                y2="108"
+                stroke="#475569"
+                stroke-width="1.5"
+              />
+              <polygon
+                points="179,112 191,112 188,116 182,116"
+                fill="#334155"
+              />
+
+              <text
+                x="120"
+                y="172"
+                text-anchor="middle"
+                fill="#1e3a8a"
+                font-size="12"
+                font-weight="bold"
+              >
+                Closed Loop = Yellow Light Globe Glows!
+              </text>
+            </svg>
+            <p class="caption">Complete Circle = Power Flows!</p>
+            <p class="sub-caption">
+              Electricity travels from <code>+</code>, heats the filament inside
+              the globe, and returns to <code>-</code>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: WEEK 4 TINKERCAD LEVEL CROSSING -->
+      <section class="slide">
+        <div class="split-layout">
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Week 4 • 45 Mins • Guide</span>
+              <h1>Tinkercad Railway Crossing</h1>
+              <p>
+                Wire flashing warning signals and a motorised boom gate safely
+                on screen before touching real hardware at camp!
+              </p>
+              <div class="teacher-note">
+                <strong
+                  >👩🏾‍🏫 2-Min Mini-Lecture: Why Engineers Simulate First</strong
+                >
+                <ul>
+                  <li>
+                    <strong>Digital Sandbox:</strong> "Before real engineers
+                    build a bridge or wire a train signal, they build a virtual
+                    copy on a computer to make sure nothing overheats or
+                    breaks."
+                  </li>
+                  <li>
+                    <strong>Two Outputs Today:</strong> "First we'll use
+                    electricity to make <strong>light</strong> (an LED signal),
+                    and then we'll use electricity to make
+                    <strong>movement</strong> (a spinning motor for the boom
+                    gate)!"
+                  </li>
+                  <li>
+                    <strong>Home Access:</strong> "Set up a free Tinkercad
+                    <em>Educator Class</em> so he can log in at home with a
+                    Class Code—no email needed."
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 1: Flashing Warning Lights (25 mins)</h3>
+              <ul>
+                <li>
+                  Drag out a <strong>Coin Cell Battery</strong>, a
+                  <strong>Resistor</strong>, and a <strong>Red LED</strong>.
+                </li>
+                <li>
+                  Connect <code>+</code> to the bent leg (Anode) and click
+                  <strong>Start Simulation</strong>.
+                </li>
+                <li>
+                  Add a <strong>Slide Switch</strong> to toggle between Red
+                  (Stop) and Green (Go) lights!
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 2: Boom Gate Motor (20 mins)</h3>
+              <p>
+                Connect a <strong>DC Motor</strong> or
+                <strong>Micro Servo</strong> to swing the railway boom gate arm
+                up and down!
+              </p>
+            </div>
+
+            <div class="box-card hint-box">
+              <h3>💡 Hints</h3>
+              <p>
+                <strong>Need to turn a part?</strong> Click any component in
+                Tinkercad and press the <code>R</code> key on your keyboard to
+                rotate it neatly.
+              </p>
+            </div>
+          </div>
+
+          <div class="rhs-stage">
+            <svg
+              viewBox="0 0 240 185"
+              aria-label="Animated railway level crossing signal and boom gate"
+            >
+              <rect
+                x="10"
+                y="155"
+                width="220"
+                height="14"
+                rx="4"
+                fill="#64748b"
+              />
+              <rect
+                x="48"
+                y="45"
+                width="10"
+                height="110"
+                rx="3"
+                fill="#334155"
+              />
+              <line
+                x1="33"
+                y1="55"
+                x2="73"
+                y2="85"
+                stroke="#ffffff"
+                stroke-width="8"
+                stroke-linecap="round"
+              />
+              <line
+                x1="73"
+                y1="55"
+                x2="33"
+                y2="85"
+                stroke="#ffffff"
+                stroke-width="8"
+                stroke-linecap="round"
+              />
+              <line
+                x1="33"
+                y1="55"
+                x2="73"
+                y2="85"
+                stroke="#ef4444"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <line
+                x1="73"
+                y1="55"
+                x2="33"
+                y2="85"
+                stroke="#ef4444"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <rect
+                x="30"
+                y="92"
+                width="46"
+                height="22"
+                rx="6"
+                fill="#1e293b"
+              />
+              <circle
+                cx="43"
+                cy="103"
+                r="6"
+                fill="#ef4444"
+                class="signal-flash"
+              />
+              <circle
+                cx="63"
+                cy="103"
+                r="6"
+                fill="#ef4444"
+                class="signal-flash"
+                style="animation-delay: 0.6s"
+              />
+              <rect
+                x="150"
+                y="105"
+                width="26"
+                height="50"
+                rx="5"
+                fill="#f59e0b"
+                stroke="#1e293b"
+                stroke-width="2"
+              />
+              <g class="gate-arm">
+                <rect
+                  x="65"
+                  y="112"
+                  width="105"
+                  height="7"
+                  rx="3"
+                  fill="#ef4444"
+                />
+                <rect x="80" y="112" width="15" height="7" fill="#ffffff" />
+                <rect x="110" y="112" width="15" height="7" fill="#ffffff" />
+                <rect x="140" y="112" width="15" height="7" fill="#ffffff" />
+              </g>
+              <circle cx="163" cy="115" r="5" fill="#1e293b" />
+            </svg>
+            <a
+              href="https://tinkercad.com"
+              target="_blank"
+              rel="noopener"
+              class="big-btn blue-btn"
+            >
+              ⚡ Open Tinkercad Circuits ↗
+            </a>
+            <p class="sub-caption">
+              Direct link: <code>://tinkercad.com</code>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: WEEK 5 SOUND AI + INTERACTIVE QUIZ -->
+      <section class="slide">
+        <div class="split-layout">
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Week 5 • 45 Mins • Sound Recognition AI</span>
+              <h1>How AI "Learns" (Sound Recognition)</h1>
+              <p>
+                Regular code follows strict rules.
+                <strong>Artificial Intelligence (AI)</strong> learns from
+                examples—just like learning the difference between a green
+                signal and a red signal!
+              </p>
+              <div class="teacher-note">
+                <strong
+                  >👩🏾‍🏫 2-Min Mini-Lecture: How AI Differs from Regular
+                  Code</strong
+                >
+                <ul>
+                  <li>
+                    <strong>Regular Code vs. AI:</strong> "In Scratch, we wrote
+                    exact rules. With
+                    <strong>Artificial Intelligence (AI)</strong>, we don't
+                    write rules—we show the computer lots of examples and let it
+                    spot patterns on its own!"
+                  </li>
+                  <li>
+                    <strong>How Audio AI hears:</strong> "The computer turns
+                    your clap into a sound-wave picture and compares it to the
+                    examples you recorded."
+                  </li>
+                  <li>
+                    <strong>Quiz Answer:</strong> "B is correct—AI only knows
+                    what we show it during training!"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 1: Train a Clapping Train Controller (30 mins)</h3>
+              <ol>
+                <li>
+                  Open <strong>Teachable Machine (Audio)</strong> and record 8
+                  seconds of quiet room noise for <em>Background Noise</em>.
+                </li>
+                <li>
+                  Create two classes: <strong>"Clap = GO"</strong> and
+                  <strong>"Tap Table = STOP"</strong>, and record 8 samples of
+                  each!
+                </li>
+                <li>
+                  Click <strong>Train Model</strong> and test if the AI hears
+                  the difference!
+                </li>
+              </ol>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 2: Brain-Teaser Challenge (15 mins)</h3>
+              <p>
+                Try the interactive AI question on the right! See if you can
+                figure out why engineers train AI in lots of different
+                conditions.
+              </p>
+            </div>
+
+            <div class="box-card hint-box">
+              <h3>💡 Hints</h3>
+              <p>
+                <strong>AI unsure?</strong> Make sure everyone stays quiet while
+                recording <em>Background Noise</em> so the AI knows what silence
+                sounds like.
+              </p>
+            </div>
+          </div>
+
+          <div class="rhs-stage">
+            <div class="quiz-box">
+              <h4>
+                🤔 Quick Engineer Quiz: What happens if a self-driving train's
+                AI is ONLY trained in bright sunshine, and then drives into a
+                dark tunnel?
+              </h4>
+              <button class="quiz-opt" onclick="checkQuiz(this, false)">
+                A) It grows headlights automatically using magic.
+              </button>
+              <button class="quiz-opt" onclick="checkQuiz(this, true)">
+                B) It gets confused in the dark because it has never seen dark
+                tunnel examples!
+              </button>
+              <button class="quiz-opt" onclick="checkQuiz(this, false)">
+                C) It drives twice as fast to get out of the tunnel.
+              </button>
+              <div class="quiz-feedback" id="quizFeedback"></div>
+            </div>
+
+            <a
+              href="https://teachablemachine.withgoogle.com/train/audio"
+              target="_blank"
+              rel="noopener"
+              class="big-btn green-btn"
+            >
+              🎙️ Open Sound AI Lab ↗
+            </a>
+            <p class="sub-caption">
+              Direct link: <code>://withgoogle.com</code>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: WEEK 6 SENSORY-FRIENDLY CAMP READINESS -->
+      <section class="slide">
+        <div class="split-layout">
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Week 6 • 45 Mins • Camp Ready</span>
+              <h1>Putting It All Together for Camp!</h1>
+              <p>
+                You now know how sensors, code, circuits, and AI work together.
+                Let's do one final Scratch train mission and get ready for a
+                great camp day!
+              </p>
+              <div class="teacher-note">
+                <strong>👩🏾‍🏫 2-Min Mini-Lecture: Ready for Camp</strong>
+                <ul>
+                  <li>
+                    <strong>Confidence boost:</strong> "Remind him he already
+                    understands sensors, algorithms, circuits, and AI—more than
+                    most first-time campers!"
+                  </li>
+                  <li>
+                    <strong>Equipment:</strong> "Camp laptops are arranged, so
+                    he just needs to bring his curiosity."
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 1: Sydney Express Passenger Game (25 mins)</h3>
+              <ul>
+                <li>
+                  In Scratch, click
+                  <strong>Variables → Make a Variable</strong> named
+                  <code>Passengers</code>.
+                </li>
+                <li>
+                  Add a <strong>Station Platform</strong> sprite that jumps to a
+                  <code>go to [random position]</code> whenever your train
+                  arrives, adding <code>+1</code> passenger!
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card">
+              <h3>Part 2: Your Calm Camp Superpowers (20 mins)</h3>
+              <ul>
+                <li>
+                  <strong>Go at your own pace:</strong> Coding takes trial and
+                  error—bugs are normal!
+                </li>
+                <li>
+                  <strong>Quiet breaks are okay:</strong> If the room or buzzers
+                  feel loud, it's always fine to put on headphones or ask a
+                  teacher for a quiet breather.
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-card hint-box">
+              <h3>💡 Hints</h3>
+              <p>
+                🎉 <strong>You are ready!</strong> Remember: every real engineer
+                asks questions and tests ideas one small step at a time.
+              </p>
+            </div>
+          </div>
+
+          <div class="rhs-stage">
+            <svg
+              viewBox="0 0 280 185"
+              aria-label="Achievement Trophy and Ready for Camp Badge"
+            >
+              <circle
+                cx="140"
+                cy="85"
+                r="62"
+                fill="#dbeafe"
+                stroke="#2563eb"
+                stroke-width="3"
+              />
+              <path
+                d="M115,60 L165,60 L158,100 C155,112 125,112 122,100 Z"
+                fill="#f59e0b"
+              />
+              <path
+                d="M115,68 C100,68 100,88 117,88"
+                fill="none"
+                stroke="#d97706"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M165,68 C180,68 180,88 163,88"
+                fill="none"
+                stroke="#d97706"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <rect x="134" y="108" width="12" height="16" fill="#d97706" />
+              <rect
+                x="120"
+                y="124"
+                width="40"
+                height="10"
+                rx="4"
+                fill="#1e293b"
+              />
+              <text
+                x="140"
+                y="73"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-weight="bold"
+                font-size="6.2"
+              >
+                AI ROBOTICS
+              </text>
+              <text
+                x="140"
+                y="83"
+                text-anchor="middle"
+                fill="#fef3c7"
+                font-weight="bold"
+                font-size="6.2"
+              >
+                TRAIN
+              </text>
+              <text
+                x="140"
+                y="93"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-weight="bold"
+                font-size="6.2"
+              >
+                ENGINEER
+              </text>
+            </svg>
+            <p class="caption">
+              🎉 Achievement Unlocked: Ready for Robotics Camp!
+            </p>
+            <p class="sub-caption">
+              Take a deep breath, have fun building, and enjoy every moment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: PROJECTS HUB (LHS LIST, RHS INSTRUCTIONS & INTERACTIVE SVGS) -->
+      <section class="slide">
+        <div class="projects-layout">
+          <!-- LHS: Project List -->
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Hands-On Builds</span>
+              <h1>AI & Robotics Projects</h1>
+              <p>
+                Tap a project to see how it works and follow the step-by-step
+                build instructions!
+              </p>
+              <div class="teacher-note">
+                <strong>👩🏾‍🏫 Facilitator Tip:</strong>
+                <ul>
+                  <li>
+                    "Every smart vehicle—on land, in airports, or in the
+                    sky—uses the exact same
+                    <strong>Sensor → Brain → Motor</strong> loop!"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="vertical-list">
+              <button
+                class="list-item-btn active"
+                onclick="selectItem('proj', 0, this)"
+              >
+                🚗 Driverless Car (Tesla)
+                <span>Scratch • Lane-Keeping & Auto-Stop</span>
+              </button>
+              <button
+                class="list-item-btn"
+                onclick="selectItem('proj', 1, this)"
+              >
+                🚁 Flying Rescue Drone
+                <span>Scratch • Altitude Hover & Supply Drop</span>
+              </button>
+              <button
+                class="list-item-btn"
+                onclick="selectItem('proj', 2, this)"
+              >
+                🧳 Smart Baggage Sorter
+                <span>Sound AI • Airport Conveyor Gate</span>
+              </button>
+              <button
+                class="list-item-btn"
+                onclick="selectItem('proj', 3, this)"
+              >
+                🤖 6-Wheeled Delivery Rover
+                <span>Tinkercad • Ultrasonic Obstacle Avoider</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- RHS: Instructions & Upgraded Interactive Images -->
+          <div>
+            <!-- PROJECT 0: TESLA DRIVERLESS CAR -->
+            <div class="detail-pane active" id="proj-0">
+              <h3>🚗 Project 1: Autonomous Lane-Keeping Car (Like a Tesla)</h3>
+              <div class="ipo-strip">
+                <div class="ipo-box ipo-in">
+                  <strong>1. INPUT:</strong> Front bumper colour sensors detect
+                  white road lines.
+                </div>
+                <div class="ipo-box ipo-ai">
+                  <strong>2. AI BRAIN:</strong> <code>If/Then</code> steering
+                  rules keep the car inside the lane.
+                </div>
+                <div class="ipo-box ipo-out">
+                  <strong>3. OUTPUT:</strong> Left/right wheel steering +
+                  automatic red-light braking.
+                </div>
+              </div>
+              <div
+                class="rhs-stage"
+                style="min-height: 170px; margin-bottom: 14px; padding: 12px"
+              >
+                <svg
+                  viewBox="0 0 320 120"
+                  style="max-width: 310px"
+                  aria-label="Autonomous car staying inside road lanes"
+                >
+                  <rect
+                    x="10"
+                    y="20"
+                    width="300"
+                    height="80"
+                    rx="12"
+                    fill="#334155"
+                  />
+                  <line
+                    x1="20"
+                    y1="30"
+                    x2="300"
+                    y2="30"
+                    stroke="#ffffff"
+                    stroke-width="3"
+                  />
+                  <line
+                    x1="20"
+                    y1="90"
+                    x2="300"
+                    y2="90"
+                    stroke="#ffffff"
+                    stroke-width="3"
+                  />
+                  <line
+                    x1="20"
+                    y1="60"
+                    x2="300"
+                    y2="60"
+                    stroke="#94a3b8"
+                    stroke-width="2"
+                    stroke-dasharray="12,10"
+                  />
+                  <g class="train-chug">
+                    <rect
+                      x="115"
+                      y="42"
+                      width="66"
+                      height="34"
+                      rx="8"
+                      fill="#2563eb"
+                    />
+                    <rect
+                      x="130"
+                      y="47"
+                      width="34"
+                      height="24"
+                      rx="4"
+                      fill="#bae6fd"
+                    />
+                    <circle cx="180" cy="48" r="4" fill="#fef08a" />
+                    <circle cx="180" cy="70" r="4" fill="#38bdf8" />
+                  </g>
+                </svg>
+              </div>
+              <ol>
+                <li>
+                  <strong>Draw the Road:</strong> Paint a black looping track in
+                  Scratch with bright <strong>white edges</strong> and a
+                  <strong>red stop line</strong>.
+                </li>
+                <li>
+                  <strong>Paint Bumper Sensors:</strong> Draw a top-down car
+                  with a <strong>yellow dot</strong> on its front-left bumper
+                  and a <strong>blue dot</strong> on its front-right bumper.
+                </li>
+                <li>
+                  <strong>Code Auto-Steering:</strong> Inside a
+                  <code>forever</code> loop, add <code>move (3) steps</code>.
+                  Then add:
+                  <code
+                    >if &lt;colour [yellow] is touching [white]?&gt; then turn
+                    right (5) degrees</code
+                  >
+                  (and turn left when blue touches white!).
+                </li>
+                <li>
+                  <strong>Add Red-Light Stop:</strong> Add
+                  <code
+                    >if &lt;touching colour [red]?&gt; then wait (2)
+                    seconds</code
+                  >
+                  so it obeys traffic lights automatically!
+                </li>
+              </ol>
+            </div>
+
+            <!-- PROJECT 1: FLYING RESCUE DRONE -->
+            <div class="detail-pane" id="proj-1">
+              <h3>🚁 Project 2: Autonomous Flying Rescue Drone</h3>
+              <div class="ipo-strip">
+                <div class="ipo-box ipo-in">
+                  <strong>1. INPUT:</strong> Downward altitude sensor measures
+                  height above the ground.
+                </div>
+                <div class="ipo-box ipo-ai">
+                  <strong>2. AI BRAIN:</strong> Flight controller balances all 4
+                  rotors so the drone hovers level.
+                </div>
+                <div class="ipo-box ipo-out">
+                  <strong>3. OUTPUT:</strong> 4 spinning propeller motors +
+                  servo claw that drops a medical kit!
+                </div>
+              </div>
+              <div
+                class="rhs-stage"
+                style="min-height: 170px; margin-bottom: 14px; padding: 12px"
+              >
+                <svg
+                  viewBox="0 0 320 130"
+                  style="max-width: 310px"
+                  aria-label="Hovering flying rescue drone"
+                >
+                  <g class="drone-hover">
+                    <line
+                      x1="85"
+                      y1="52"
+                      x2="235"
+                      y2="52"
+                      stroke="#334155"
+                      stroke-width="6"
+                      stroke-linecap="round"
+                    />
+                    <rect
+                      x="82"
+                      y="42"
+                      width="10"
+                      height="14"
+                      rx="2"
+                      fill="#1e293b"
+                    />
+                    <rect
+                      x="228"
+                      y="42"
+                      width="10"
+                      height="14"
+                      rx="2"
+                      fill="#1e293b"
+                    />
+                    <ellipse
+                      cx="87"
+                      cy="40"
+                      rx="34"
+                      ry="4"
+                      fill="#38bdf8"
+                      opacity="0.8"
+                      class="signal-flash"
+                    />
+                    <ellipse
+                      cx="233"
+                      cy="40"
+                      rx="34"
+                      ry="4"
+                      fill="#38bdf8"
+                      opacity="0.8"
+                      class="signal-flash"
+                    />
+                    <rect
+                      x="125"
+                      y="42"
+                      width="70"
+                      height="24"
+                      rx="8"
+                      fill="#2563eb"
+                    />
+                    <circle cx="160" cy="54" r="6" fill="#fef08a" />
+                    <path
+                      d="M135,66 L128,84 L145,84 M185,66 L192,84 L175,84"
+                      fill="none"
+                      stroke="#475569"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                    <rect
+                      x="148"
+                      y="68"
+                      width="24"
+                      height="18"
+                      rx="4"
+                      fill="#10b981"
+                    />
+                    <line
+                      x1="160"
+                      y1="71"
+                      x2="160"
+                      y2="83"
+                      stroke="#ffffff"
+                      stroke-width="3"
+                    />
+                    <line
+                      x1="154"
+                      y1="77"
+                      x2="166"
+                      y2="77"
+                      stroke="#ffffff"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <ol>
+                <li>
+                  <strong>Draw a Drone & Landing Pad:</strong> Paint a
+                  quadcopter drone sprite and a green
+                  <strong>Rescue Target</strong> pad at the bottom of the
+                  screen.
+                </li>
+                <li>
+                  <strong>Code Gravity & Hover:</strong> Inside a
+                  <code>forever</code> loop, add
+                  <code>change y by (-2)</code> (gravity!), plus
+                  <code
+                    >if &lt;key [up arrow] pressed?&gt; then change y by
+                    (5)</code
+                  >
+                  to fire the rotors!
+                </li>
+                <li>
+                  <strong>Code Auto-Landing:</strong> Add
+                  <code
+                    >if &lt;touching [Rescue Target]?&gt; then say "Supplies
+                    Delivered!"</code
+                  >
+                  and stop all scripts.
+                </li>
+              </ol>
+            </div>
+
+            <!-- PROJECT 2: SMART BAGGAGE SORTER -->
+            <div class="detail-pane" id="proj-2">
+              <h3>🧳 Project 3: Smart Airport Baggage Sorter</h3>
+              <div class="ipo-strip">
+                <div class="ipo-box ipo-in">
+                  <strong>1. INPUT:</strong> Microphone hears scanner beep codes
+                  as bags move down the belt.
+                </div>
+                <div class="ipo-box ipo-ai">
+                  <strong>2. AI BRAIN:</strong> Sound AI decides whether the bag
+                  goes to Gate 1 (Sydney) or Gate 2 (Melbourne).
+                </div>
+                <div class="ipo-box ipo-out">
+                  <strong>3. OUTPUT:</strong> Conveyor diverter arm pushes the
+                  suitcase onto the right chute!
+                </div>
+              </div>
+              <div
+                class="rhs-stage"
+                style="min-height: 170px; margin-bottom: 14px; padding: 12px"
+              >
+                <svg
+                  viewBox="0 0 320 130"
+                  style="max-width: 310px"
+                  aria-label="Airport baggage conveyor with wheeled suitcase"
+                >
+                  <rect
+                    x="20"
+                    y="96"
+                    width="280"
+                    height="14"
+                    rx="7"
+                    fill="#475569"
+                  />
+                  <circle cx="35" cy="103" r="4" fill="#cbd5e1" />
+                  <circle cx="160" cy="103" r="4" fill="#cbd5e1" />
+                  <circle cx="285" cy="103" r="4" fill="#cbd5e1" />
+                  <rect
+                    x="120"
+                    y="10"
+                    width="80"
+                    height="22"
+                    rx="6"
+                    fill="#1d4ed8"
+                  />
+                  <text
+                    x="160"
+                    y="25"
+                    text-anchor="middle"
+                    fill="#ffffff"
+                    font-size="10"
+                    font-weight="bold"
+                  >
+                    GATE SCANNER
+                  </text>
+                  <g class="train-chug">
+                    <path
+                      d="M150,42 L150,28 L170,28 L170,42"
+                      fill="none"
+                      stroke="#334155"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                    <rect
+                      x="136"
+                      y="42"
+                      width="48"
+                      height="46"
+                      rx="8"
+                      fill="#10b981"
+                      stroke="#047857"
+                      stroke-width="2"
+                    />
+                    <rect x="145" y="42" width="5" height="46" fill="#064e3b" />
+                    <rect x="170" y="42" width="5" height="46" fill="#064e3b" />
+                    <polygon
+                      points="175,48 190,53 186,62 173,54"
+                      fill="#fef08a"
+                      stroke="#d97706"
+                      stroke-width="1"
+                    />
+                    <circle cx="145" cy="92" r="4" fill="#1e293b" />
+                    <circle cx="175" cy="92" r="4" fill="#1e293b" />
+                  </g>
+                </svg>
+              </div>
+              <ol>
+                <li>
+                  <strong>Pick 2 Scanner Sounds:</strong> Use a bell/spoon tap
+                  for <strong>"Gate 1: Sydney"</strong> and two claps for
+                  <strong>"Gate 2: Melbourne"</strong>.
+                </li>
+                <li>
+                  <strong>Train the Sound AI:</strong> Open
+                  <em>Teachable Machine (Audio)</em>, record 8 samples of each
+                  sound, and click <strong>Train Model</strong>.
+                </li>
+                <li>
+                  <strong>Sort the Suitcases:</strong> Play each sound as you
+                  slide toy bags across the table and see if the AI routes them
+                  to the right flight!
+                </li>
+              </ol>
+            </div>
+
+            <!-- PROJECT 3: 6-WHEELED DELIVERY ROVER -->
+            <div class="detail-pane" id="proj-3">
+              <h3>🤖 Project 4: 6-Wheeled Footpath Delivery Rover</h3>
+              <div class="ipo-strip">
+                <div class="ipo-box ipo-in">
+                  <strong>1. INPUT:</strong> Front ultrasonic "bat-ear" sensors
+                  bounce sound waves to measure distance (cm).
+                </div>
+                <div class="ipo-box ipo-ai">
+                  <strong>2. AI BRAIN:</strong> Arduino Uno checks if
+                  <code>distance &lt; 20 cm</code>.
+                </div>
+                <div class="ipo-box ipo-out">
+                  <strong>3. OUTPUT:</strong> Steers the 6 independent wheels
+                  around footpath obstacles safely!
+                </div>
+              </div>
+              <div
+                class="rhs-stage"
+                style="min-height: 170px; margin-bottom: 14px; padding: 12px"
+              >
+                <svg
+                  viewBox="0 0 320 130"
+                  style="max-width: 310px"
+                  aria-label="6-wheeled delivery rover with ultrasonic sensor eyes"
+                >
+                  <line
+                    x1="65"
+                    y1="45"
+                    x2="65"
+                    y2="14"
+                    stroke="#475569"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <polygon points="65,14 88,20 65,26" fill="#f59e0b" />
+                  <path
+                    d="M55,45 L135,45 L148,78 L50,78 Z"
+                    fill="#ffffff"
+                    stroke="#2563eb"
+                    stroke-width="3"
+                    stroke-linejoin="round"
+                  />
+                  <rect
+                    x="75"
+                    y="54"
+                    width="42"
+                    height="12"
+                    rx="4"
+                    fill="#dbeafe"
+                  />
+                  <rect
+                    x="142"
+                    y="54"
+                    width="12"
+                    height="20"
+                    rx="3"
+                    fill="#1e293b"
+                  />
+                  <circle cx="154" cy="59" r="3" fill="#38bdf8" />
+                  <circle cx="154" cy="69" r="3" fill="#38bdf8" />
+                  <rect
+                    x="48"
+                    y="78"
+                    width="104"
+                    height="10"
+                    rx="5"
+                    fill="#1d4ed8"
+                  />
+                  <circle
+                    cx="64"
+                    cy="94"
+                    r="11"
+                    fill="#1e293b"
+                    stroke="#94a3b8"
+                    stroke-width="2.5"
+                  />
+                  <circle
+                    cx="100"
+                    cy="94"
+                    r="11"
+                    fill="#1e293b"
+                    stroke="#94a3b8"
+                    stroke-width="2.5"
+                  />
+                  <circle
+                    cx="136"
+                    cy="94"
+                    r="11"
+                    fill="#1e293b"
+                    stroke="#94a3b8"
+                    stroke-width="2.5"
+                  />
+                  <path
+                    d="M164,54 Q178,64 164,74 M178,46 Q196,64 178,82"
+                    stroke="#10b981"
+                    stroke-width="3"
+                    fill="none"
+                    class="signal-flash"
+                  />
+                  <polygon points="240,96 254,48 268,96" fill="#f59e0b" />
+                  <polygon
+                    points="247,72 261,72 264,82 244,82"
+                    fill="#ffffff"
+                  />
+                  <rect
+                    x="234"
+                    y="96"
+                    width="40"
+                    height="6"
+                    rx="2"
+                    fill="#1e293b"
+                  />
+                </svg>
+              </div>
+              <ol>
+                <li>
+                  <strong>Open Tinkercad Circuits:</strong> Drag out an
+                  <strong>Arduino Uno</strong>, an
+                  <strong>Ultrasonic Distance Sensor (HC-SR04)</strong>, and two
+                  <strong>DC Motors</strong>.
+                </li>
+                <li>
+                  <strong>Wire Power & Pins:</strong> Connect sensor
+                  <code>VCC</code> to <code>5V</code>, <code>GND</code> to
+                  <code>GND</code>, and signal pins to Digital Pins
+                  <code>7</code> and <code>8</code>.
+                </li>
+                <li>
+                  <strong>Code Obstacle Avoidance:</strong> In Tinkercad's
+                  block/text editor, program:
+                  <code>if (distance &lt; 20)</code> → stop left wheel motor so
+                  the rover steers smoothly around the obstacle!
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: RESOURCES HUB -->
+      <section class="slide">
+        <div class="projects-layout">
+          <!-- LHS: Tool List -->
+          <div class="lhs-stack">
+            <div class="box-card guide-box">
+              <span class="pill">Tools & Theory</span>
+              <h1>Resources Hub</h1>
+              <p>
+                Tap a tool below to see what it does, read quick tips, and
+                launch it straight away!
+              </p>
+              <div class="teacher-note">
+                <strong>👩🏾‍🏫 Facilitator Tip:</strong>
+                <ul>
+                  <li>
+                    "Share the normal link (without <code>?teacher=1</code>)
+                    with his parents so he can launch these three tools safely
+                    at home anytime."
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="vertical-list">
+              <button
+                class="list-item-btn active"
+                onclick="selectItem('res', 0, this)"
+              >
+                🧩 Scratch Block Coding
+                <span>Visual Code Blocks • No Login Needed</span>
+              </button>
+              <button
+                class="list-item-btn"
+                onclick="selectItem('res', 1, this)"
+              >
+                ⚡ Tinkercad Circuits
+                <span>Virtual Electronics & Arduino Simulator</span>
+              </button>
+              <button
+                class="list-item-btn"
+                onclick="selectItem('res', 2, this)"
+              >
+                🎙️ Teachable Machine (Audio)
+                <span>Train a Computer to Recognise Sounds</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- RHS: Tool Info & Launch -->
+          <div>
+            <!-- RESOURCE 0: SCRATCH -->
+            <div class="detail-pane active" id="res-0">
+              <h3>🧩 Scratch — Visual Block Coding</h3>
+              <p style="margin-bottom: 12px">
+                Scratch lets you snap colourful code blocks together like
+                interlocking bricks to control trains, cars, and drones without
+                worrying about typing typos.
+              </p>
+              <div class="box-card" style="margin-bottom: 12px">
+                <h3>Key Concepts You Learn Here</h3>
+                <ul>
+                  <li>
+                    <strong>Events (Yellow):</strong> Triggers like
+                    <code>when green flag clicked</code> or
+                    <code>when key pressed</code>.
+                  </li>
+                  <li>
+                    <strong>Loops (Orange):</strong> <code>forever</code> and
+                    <code>repeat</code> blocks that keep a train checking its
+                    sensors.
+                  </li>
+                  <li>
+                    <strong>Conditionals (Orange):</strong>
+                    <code>if / then</code> blocks that let a train decide when
+                    to brake!
+                  </li>
+                  <li>
+                    <strong>Variables (Dark Orange):</strong> Memory boxes that
+                    track <code>Passengers</code>, <code>Speed</code>, or
+                    <code>Coal</code>.
+                  </li>
+                </ul>
+              </div>
+              <p>
+                <strong>Home Saving Tip:</strong> Click
+                <em>File → Save to your computer</em> to save a
+                <code>.sb3</code> file without needing an account.
+              </p>
+              <a
+                href="https://scratch.mit.edu/projects/editor/"
+                target="_blank"
+                rel="noopener"
+                class="big-btn green-btn"
+              >
+                🚀 Launch Scratch Editor ↗
+              </a>
+            </div>
+
+            <!-- RESOURCE 1: TINKERCAD -->
+            <div class="detail-pane" id="res-1">
+              <h3>⚡ Tinkercad Circuits — Virtual Electronics Lab</h3>
+              <p style="margin-bottom: 12px">
+                Tinkercad lets you wire batteries, light globes, switches,
+                motors, and Arduino microcontrollers safely on screen—so you can
+                test circuits before building them at camp!
+              </p>
+              <div class="box-card" style="margin-bottom: 12px">
+                <h3>Key Concepts You Learn Here</h3>
+                <ul>
+                  <li>
+                    <strong>Closed Circuits:</strong> Electricity must travel in
+                    a complete loop from <code>+</code> back to <code>-</code>.
+                  </li>
+                  <li>
+                    <strong>Polarity:</strong> LEDs have a long/bent positive
+                    leg (<strong>Anode</strong>) and a short negative leg
+                    (<strong>Cathode</strong>).
+                  </li>
+                  <li>
+                    <strong>Resistors:</strong> Protect tiny globes and LEDs
+                    from burning out when connected to stronger batteries.
+                  </li>
+                  <li>
+                    <strong>Microcontrollers:</strong> Code an Arduino Uno using
+                    blocks or real C++ text!
+                  </li>
+                </ul>
+              </div>
+              <p>
+                <strong>Home Login Tip:</strong> Use your Classroom Code +
+                Nickname so you don't need an email address.
+              </p>
+              <a
+                href="https://tinkercad.com"
+                target="_blank"
+                rel="noopener"
+                class="big-btn blue-btn"
+              >
+                ⚡ Launch Tinkercad Circuits ↗
+              </a>
+            </div>
+
+            <!-- RESOURCE 2: SOUND AI -->
+            <div class="detail-pane" id="res-2">
+              <h3>🎙️ Teachable Machine — Audio Pattern Recognition</h3>
+              <p style="margin-bottom: 12px">
+                Teachable Machine is a free web tool that lets you train a real
+                Machine Learning model using claps, whistles, or table taps—no
+                coding required!
+              </p>
+              <div class="box-card" style="margin-bottom: 12px">
+                <h3>Key Concepts You Learn Here</h3>
+                <ul>
+                  <li>
+                    <strong>Training Data:</strong> Recording 8+ sound samples
+                    for each category ("Class").
+                  </li>
+                  <li>
+                    <strong>Pattern Recognition:</strong> How AI spots rhythm
+                    and pitch differences between claps and taps.
+                  </li>
+                  <li>
+                    <strong>Confidence Score:</strong> The percentage bar
+                    (0–100%) showing how sure the AI is about what it hears.
+                  </li>
+                  <li>
+                    <strong>Local Processing:</strong> Everything runs right
+                    inside your web browser.
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="https://teachablemachine.withgoogle.com/train/audio"
+                target="_blank"
+                rel="noopener"
+                class="big-btn green-btn"
+              >
+                🎙️ Launch Sound AI Lab ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">
+        ← Previous
+      </button>
+      <span class="slide-status" id="slideStatus"
+        >Start (Today's Demo) • Page 1 of 9</span
+      >
+      <button class="nav-btn primary" id="nextBtn" onclick="changeSlide(1)">
+        Next →
+      </button>
+    </footer>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      const tabs = document.querySelectorAll(".tab-btn");
+      const statusText = document.getElementById("slideStatus");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      let current = 0;
+
+      if (new URLSearchParams(window.location.search).get("teacher") === "1") {
+        document.body.classList.add("teacher-mode");
+      }
+
+      const titles = [
+        "Start (Today's Demo)",
+        "Week 1: Robotics & Engineering",
+        "Week 2: Scratch Train",
+        "Week 3: Electricity",
+        "Week 4: Tinkercad Crossing",
+        "Week 5: Sound AI",
+        "Week 6: Camp Ready!",
+        "AI & Robotics Projects",
+        "Resources Hub",
+      ];
+
+      function goToSlide(index) {
+        slides[current].classList.remove("active");
+        tabs[current].classList.remove("active");
+
+        current = index;
+
+        slides[current].classList.add("active");
+        tabs[current].classList.add("active");
+
+        statusText.textContent = `${titles[current]} • Page ${current + 1} of ${slides.length}`;
+        prevBtn.disabled = current === 0;
+        nextBtn.textContent =
+          current === slides.length - 1 ? "All Done! 🎉" : "Next →";
+      }
+
+      function changeSlide(step) {
+        const next = current + step;
+        if (next >= 0 && next < slides.length) {
+          goToSlide(next);
+        }
+      }
+
+      function selectItem(prefix, idx, btn) {
+        const container = btn.closest(".projects-layout");
+        container
+          .querySelectorAll(".detail-pane")
+          .forEach((el) => el.classList.remove("active"));
+        container
+          .querySelectorAll(".list-item-btn")
+          .forEach((el) => el.classList.remove("active"));
+        document.getElementById(`${prefix}-${idx}`).classList.add("active");
+        btn.classList.add("active");
+      }
+
+      function checkQuiz(btn, isCorrect) {
+        const box = btn.closest(".quiz-box");
+        const feedback = document.getElementById("quizFeedback");
+        box.querySelectorAll(".quiz-opt").forEach((b) => {
+          b.classList.remove("correct", "wrong");
+        });
+
+        if (isCorrect) {
+          btn.classList.add("correct");
+          feedback.style.color = "#047857";
+          feedback.textContent =
+            "✅ Spot on! Because the AI only ever saw sunny photos, it gets confused in the dark. That is why engineers train AI in sunshine, rain, and dark tunnels!";
+        } else {
+          btn.classList.add("wrong");
+          feedback.style.color = "#b91c1c";
+          feedback.textContent =
+            "❌ Not quite! Remember: AI only knows what we show it during training. Try another option!";
+        }
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") changeSlide(1);
+        if (e.key === "ArrowLeft") changeSlide(-1);
+      });
+    </script>
+  </body>
+</html>
