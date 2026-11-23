@@ -364,7 +364,7 @@
               <span class="pill">Week 1 • 45 Mins • Guide</span>
               <h1>Robotics & Engineering Foundations</h1>
               <p>
-                Smart machines follow a 3-step loop (<strong
+                Smart trains follow a 3-carriage loop (<strong
                   >Input → Brain → Output</strong
                 >) every second without human common sense.
               </p>
@@ -410,160 +410,371 @@
             <div class="box-card">
               <h3>Part 2: Household Sensor Hunt (20 mins)</h3>
               <p>
-                Spot the <strong>Input → Brain → Output</strong> on 3 machines
-                at home (e.g., automatic sliding door, fridge light, toaster).
+                Guess the <strong>Input → Brain → Output</strong> for these 3
+                everyday machines, then tap each button to check your answer:
               </p>
+              <div class="sensor-pills">
+                <button class="sensor-btn" onclick="revealSensor(0, this)">
+                  🚪 Automatic Shop Door
+                </button>
+                <button class="sensor-btn" onclick="revealSensor(1, this)">
+                  🧊 Fridge Door Light
+                </button>
+                <button class="sensor-btn" onclick="revealSensor(2, this)">
+                  🍞 Pop-Up Toaster
+                </button>
+              </div>
+              <div class="sensor-reveal" id="sensor-0">
+                <strong>🚪 Automatic Shop Door:</strong><br />
+                <strong>1. Input:</strong> Motion sensor above the door spots
+                movement.<br />
+                <strong>2. Brain:</strong> Door controller decides someone is
+                walking up.<br />
+                <strong>3. Output:</strong> Electric motor slides the glass
+                doors open!
+              </div>
+              <div class="sensor-reveal" id="sensor-1">
+                <strong>🧊 Fridge Door Light:</strong><br />
+                <strong>1. Input:</strong> Door-pin switch pops out when you
+                open the fridge.<br />
+                <strong>2. Brain:</strong> Electrical circuit closes
+                automatically.<br />
+                <strong>3. Output:</strong> Inside light globe switches on!
+              </div>
+              <div class="sensor-reveal" id="sensor-2">
+                <strong>🍞 Pop-Up Toaster:</strong><br />
+                <strong>1. Input:</strong> Lever pushed down + heat/timer sensor
+                reaches toast time.<br />
+                <strong>2. Brain:</strong> Timer release latch triggers.<br />
+                <strong>3. Output:</strong> Spring pops the toast up and turns
+                off the heat!
+              </div>
             </div>
 
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
               <p>
-                <strong>Stuck on the Hunt?</strong> Look at your fridge door!
-                Opening the door releases a little button
-                (<strong>Input</strong>) that turns on the light
-                (<strong>Output</strong>).
+                <strong>How to spot an Input:</strong> Ask yourself,
+                <em
+                  >"What button, timer, heat sensor, or movement tells this
+                  machine it's time to wake up?"</em
+                >
               </p>
             </div>
           </div>
 
+          <!-- RHS: 3-Carriage Input -> Brain -> Output Train on Green Grass -->
           <div class="rhs-stage">
             <svg
-              viewBox="0 0 600 180"
-              aria-label="Input Brain Output Robotics Loop"
+              viewBox="0 0 540 205"
+              style="max-width: 500px"
+              aria-label="Three-carriage Robotics Train showing Input, Brain, and Output on green grass"
             >
-              <rect
-                x="10"
-                y="30"
-                width="155"
-                height="100"
-                rx="16"
-                fill="#dbeafe"
-                stroke="#2563eb"
-                stroke-width="3"
-              />
-              <text
-                x="87"
-                y="72"
-                text-anchor="middle"
-                font-weight="bold"
-                fill="#1e3a8a"
-                font-size="18"
-              >
-                1. INPUT
-              </text>
-              <text
-                x="87"
-                y="98"
-                text-anchor="middle"
-                fill="#2563eb"
-                font-size="14"
-              >
-                Sensors & Switches
-              </text>
-
-              <line
-                x1="170"
-                y1="80"
-                x2="220"
-                y2="80"
-                stroke="#94a3b8"
-                stroke-width="4"
-                stroke-dasharray="6,6"
+              <!-- Steam rising from front locomotive chimney (right side) -->
+              <circle
+                cx="485"
+                cy="36"
+                r="8"
+                fill="#94a3b8"
+                class="chimney-steam-1"
+                style="transform-origin: 485px 36px"
               />
               <circle
-                cx="195"
-                cy="80"
-                r="7"
-                fill="#f59e0b"
-                class="data-flow-1"
+                cx="485"
+                cy="36"
+                r="11"
+                fill="#cbd5e1"
+                class="chimney-steam-2"
+                style="transform-origin: 485px 36px"
               />
 
+              <g class="train-chug">
+                <!-- CARRIAGE 3 (Left): 3. OUTPUT -->
+                <rect
+                  x="20"
+                  y="65"
+                  width="135"
+                  height="75"
+                  rx="12"
+                  fill="#d1fae5"
+                  stroke="#10b981"
+                  stroke-width="3"
+                />
+                <rect
+                  x="28"
+                  y="57"
+                  width="119"
+                  height="8"
+                  rx="4"
+                  fill="#047857"
+                />
+                <text
+                  x="87"
+                  y="98"
+                  text-anchor="middle"
+                  font-weight="bold"
+                  fill="#064e3b"
+                  font-size="16"
+                >
+                  3. OUTPUT
+                </text>
+                <text
+                  x="87"
+                  y="120"
+                  text-anchor="middle"
+                  fill="#047857"
+                  font-size="12"
+                >
+                  Motors & Lights
+                </text>
+
+                <!-- Coupling Bar 1 -->
+                <rect
+                  x="155"
+                  y="118"
+                  width="24"
+                  height="8"
+                  rx="3"
+                  fill="#334155"
+                />
+                <circle
+                  cx="167"
+                  cy="122"
+                  r="5"
+                  fill="#f59e0b"
+                  class="signal-flash"
+                />
+
+                <!-- CARRIAGE 2 (Middle): 2. BRAIN -->
+                <rect
+                  x="179"
+                  y="65"
+                  width="135"
+                  height="75"
+                  rx="12"
+                  fill="#fef3c7"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+                <rect
+                  x="187"
+                  y="57"
+                  width="119"
+                  height="8"
+                  rx="4"
+                  fill="#d97706"
+                />
+                <text
+                  x="246"
+                  y="98"
+                  text-anchor="middle"
+                  font-weight="bold"
+                  fill="#78350f"
+                  font-size="16"
+                >
+                  2. BRAIN
+                </text>
+                <text
+                  x="246"
+                  y="120"
+                  text-anchor="middle"
+                  fill="#b45309"
+                  font-size="12"
+                >
+                  Code & Rules
+                </text>
+
+                <!-- Coupling Bar 2 -->
+                <rect
+                  x="314"
+                  y="118"
+                  width="24"
+                  height="8"
+                  rx="3"
+                  fill="#334155"
+                />
+                <circle
+                  cx="326"
+                  cy="122"
+                  r="5"
+                  fill="#2563eb"
+                  class="signal-flash"
+                />
+
+                <!-- ENGINE 1 (Right/Front): 1. INPUT -->
+                <rect
+                  x="338"
+                  y="50"
+                  width="52"
+                  height="90"
+                  rx="8"
+                  fill="#1d4ed8"
+                />
+                <rect
+                  x="334"
+                  y="44"
+                  width="60"
+                  height="7"
+                  rx="3"
+                  fill="#f59e0b"
+                />
+                <rect
+                  x="348"
+                  y="58"
+                  width="32"
+                  height="22"
+                  rx="4"
+                  fill="#bae6fd"
+                />
+                <rect
+                  x="386"
+                  y="66"
+                  width="115"
+                  height="74"
+                  rx="12"
+                  fill="#dbeafe"
+                  stroke="#2563eb"
+                  stroke-width="3"
+                />
+                <polygon points="478,66 492,66 490,42 480,42" fill="#1e293b" />
+                <rect
+                  x="476"
+                  y="38"
+                  width="18"
+                  height="5"
+                  rx="2"
+                  fill="#f59e0b"
+                />
+                <polygon points="501,122 522,138 501,138" fill="#ef4444" />
+                <text
+                  x="443"
+                  y="98"
+                  text-anchor="middle"
+                  font-weight="bold"
+                  fill="#1e3a8a"
+                  font-size="16"
+                >
+                  1. INPUT
+                </text>
+                <text
+                  x="443"
+                  y="120"
+                  text-anchor="middle"
+                  fill="#2563eb"
+                  font-size="12"
+                >
+                  Sensors
+                </text>
+              </g>
+
+              <!-- Spinning Wheels under all 3 Carriages -->
+              <g class="wheel-spin">
+                <circle
+                  cx="52"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="122"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="211"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="281"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="364"
+                  cy="146"
+                  r="16"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3.5"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="422"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="476"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+
+              <!-- Green Grass & Railway Track -->
               <rect
-                x="225"
-                y="30"
-                width="155"
-                height="100"
-                rx="16"
-                fill="#fef3c7"
-                stroke="#f59e0b"
-                stroke-width="3"
-              />
-              <text
-                x="302"
-                y="72"
-                text-anchor="middle"
-                font-weight="bold"
-                fill="#78350f"
-                font-size="18"
-              >
-                2. BRAIN
-              </text>
-              <text
-                x="302"
-                y="98"
-                text-anchor="middle"
-                fill="#b45309"
-                font-size="14"
-              >
-                Code & Rules
-              </text>
-
-              <line
-                x1="385"
-                y1="80"
-                x2="435"
-                y2="80"
-                stroke="#94a3b8"
-                stroke-width="4"
-                stroke-dasharray="6,6"
-              />
-              <circle
-                cx="410"
-                cy="80"
-                r="7"
+                x="0"
+                y="166"
+                width="540"
+                height="39"
+                rx="8"
                 fill="#10b981"
-                class="data-flow-2"
               />
-
-              <rect
-                x="440"
-                y="30"
-                width="150"
-                height="100"
-                rx="16"
-                fill="#d1fae5"
-                stroke="#10b981"
+              <path
+                d="M30,166 Q36,154 42,166 M170,166 Q176,153 182,166 M330,166 Q336,154 342,166 M505,166 Q511,153 517,166"
+                stroke="#047857"
                 stroke-width="3"
+                fill="none"
+                stroke-linecap="round"
               />
-              <text
-                x="515"
-                y="72"
-                text-anchor="middle"
-                font-weight="bold"
-                fill="#064e3b"
-                font-size="18"
-              >
-                3. OUTPUT
-              </text>
-              <text
-                x="515"
-                y="98"
-                text-anchor="middle"
-                fill="#047857"
-                font-size="14"
-              >
-                Motors & Lights
-              </text>
+              <line
+                x1="10"
+                y1="164"
+                x2="530"
+                y2="164"
+                stroke="#475569"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
             </svg>
-            <p class="caption">The Universal Robotics Loop</p>
+            <p class="caption">
+              The 3-Carriage Robotics Train: Input → Brain → Output
+            </p>
             <p class="sub-caption">
-              Every robot—from a Sydney Metro train to a Mars Rover—uses these 3
-              steps.
+              Every robot—from a Sydney Metro train to a Mars Rover—pulls these
+              3 carriages together.
             </p>
           </div>
         </div>
       </section>
-
       <!-- SLIDE 2: WEEK 2 SCRATCH -->
       <section class="slide">
         <div class="split-layout">
@@ -572,123 +783,116 @@
               <span class="pill">Week 2 • 45 Mins • Guide</span>
               <h1>Scratch Level-Crossing Train</h1>
               <p>
-                Code a train that drives left and right, blows its whistle, and
-                stops automatically at a red signal!
+                Build a train that drives left and right on a Blue Sky backdrop,
+                blows its whistle, and stops automatically at a red signal!
               </p>
               <div class="teacher-note">
                 <strong>👩🏾‍🏫 2-Min Mini-Lecture: How Code Makes Decisions</strong>
                 <ul>
                   <li>
-                    <strong>Events (Yellow):</strong> Triggers that start code
-                    when a key or the Green Flag is pressed.
+                    <strong>Events (Yellow):</strong> Triggers that wake the
+                    train up when a key or the Green Flag is pressed.
                   </li>
                   <li>
-                    <strong>Forever Loops (Orange):</strong> Keeps the train's
-                    safety sensor checking hundreds of times every second.
+                    <strong>Forever Loops (Orange):</strong> Keeps the safety
+                    sensor checking hundreds of times per second.
                   </li>
                   <li>
-                    <strong>If / Then:</strong> How a train thinks:
-                    <em>IF</em> touching the red signal, <em>THEN</em> apply the
-                    brakes!
+                    <strong>If / Then:</strong> <em>IF</em> touching the red
+                    signal, <em>THEN</em> apply the brakes!
                   </li>
                   <li>
-                    <strong>Tip:</strong> Make sure the Signal is created as a
-                    <strong>new sprite</strong> (bottom-right Paintbrush), not a
-                    second costume!
+                    <strong>Backup File:</strong> The <code>.sb3</code> button
+                    loads your finished project via
+                    <em>File → Load from your computer</em> in Scratch.
                   </li>
                 </ul>
               </div>
             </div>
 
             <div class="box-card">
-              <h3>Part 1: Train Sprite, Controls & Horn (25 mins)</h3>
-              <ol>
+              <h3>Part 1: Setup & Train Controls (25 mins)</h3>
+              <ul>
                 <li>
-                  <strong>Backdrop & Train:</strong> Pick the
-                  <strong>Blue Sky</strong> backdrop (bottom-right). Delete the
-                  default cat (bin icon), hover over
-                  <strong>Choose a Sprite</strong> → click
-                  <strong>Paint</strong> (or <strong>Upload</strong>) for your
-                  train, and set <strong>Direction</strong> to Left/Right
-                  (<code>↔</code>).
+                  <strong>1. Stage & Train:</strong> Pick the
+                  <strong>Blue Sky</strong> backdrop. Delete the cat,
+                  upload/paint your train, and lock
+                  <strong>Direction</strong> to Left/Right (<code>↔</code>).
                 </li>
                 <li>
-                  <strong>Horn Sound:</strong> Open the
-                  <strong>Sounds</strong> tab → pick a <strong>Horn</strong> (or
-                  record a <em>"Choo-choo!"</em>), then return to
-                  <strong>Code</strong>.
+                  <strong>2. Horn:</strong> Open the <strong>Sounds</strong> tab
+                  → add a <strong>Horn / Whistle</strong> sound.
                 </li>
                 <li>
-                  <strong>Drive Right:</strong>
+                  <strong>3. Drive Right:</strong>
                   <code>when [right arrow] key pressed</code> →
                   <code>point in direction (90)</code> →
                   <code>move (10) steps</code>.
                 </li>
                 <li>
-                  <strong>Drive Left & Whistle:</strong> Repeat for
-                  <code>left arrow</code> with direction <code>-90</code>, plus
+                  <strong>4. Reverse & Whistle:</strong> Repeat for
+                  <code>left arrow</code> (<code>-90</code>), plus
                   <code>when [space] key pressed</code> →
-                  <code>start sound [Horn]</code>.
+                  <code>start sound [Train Whistle]</code>.
                 </li>
-              </ol>
+              </ul>
             </div>
 
             <div class="box-card">
               <h3>Part 2: Red Signal & Auto-Brake (20 mins)</h3>
-              <ol>
+              <ul>
                 <li>
-                  <strong>New Signal Sprite:</strong> Hover over
-                  <strong>Choose a Sprite</strong> (bottom-right) → click the
-                  <strong>Paintbrush</strong>, draw a red stop sign, name it
-                  <code>Signal</code>, and drag it to the right side of the
-                  stage.
+                  <strong>1. New Signal Sprite:</strong> Hover over
+                  <strong>Choose a Sprite</strong> → click
+                  <strong>Paintbrush</strong>, draw a red stop sign, and place
+                  it on the right.
                 </li>
                 <li>
-                  <strong>Select Train & Add Sensor:</strong> Click back on your
-                  <strong>Train sprite</strong>, then snap together:
+                  <strong>2. Safety Sensor Loop:</strong> Click back on your
+                  <strong>Train sprite</strong> and snap:
                   <code>when green flag clicked</code> → <code>forever</code> →
                   <code>if &lt;touching [Signal]?&gt; then</code>.
                 </li>
                 <li>
-                  <strong>Auto-Reverse:</strong> Inside the
-                  <code>if</code> mouth, put
+                  <strong>3. Auto-Reverse:</strong> Inside <code>if</code>, add
                   <code>say [Red Signal! Stopping!] for (2) seconds</code> and
-                  <code>move (-20) steps</code>. Click the
-                  <strong>Green Flag</strong> to test!
+                  <code>move (-20) steps</code>. Press the
+                  <strong>Green Flag</strong>!
                 </li>
-              </ol>
+              </ul>
             </div>
 
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
               <p>
-                <strong>Code disappeared?</strong> Each sprite has its own code
+                <strong>Blocks vanished?</strong> Each sprite has its own code
                 page—click your <strong>Train thumbnail</strong> in the
-                bottom-right box to bring your blocks back! Save via
-                <em>File → Save to your computer</em>.
+                bottom-right box to bring your blocks back!
               </p>
             </div>
           </div>
 
           <div class="rhs-stage">
+            <!-- Scratch Train Simulator Preview with Lush Green Grass -->
             <svg
-              viewBox="0 0 320 190"
-              aria-label="Scratch Train Simulator Preview"
+              viewBox="0 0 320 195"
+              aria-label="Scratch Train Simulator Preview on Green Grass"
             >
               <rect
                 x="10"
-                y="15"
+                y="12"
                 width="300"
-                height="145"
+                height="168"
                 rx="14"
                 fill="#ffffff"
                 stroke="#93c5fd"
                 stroke-width="2"
               />
-              <rect x="260" y="65" width="8" height="70" fill="#334155" />
+              <!-- Red Signal Post -->
+              <rect x="260" y="65" width="8" height="72" fill="#334155" />
               <rect
                 x="252"
-                y="50"
+                y="48"
                 width="24"
                 height="34"
                 rx="6"
@@ -696,11 +900,12 @@
               />
               <circle
                 cx="264"
-                cy="67"
+                cy="65"
                 r="7"
                 fill="#ef4444"
                 class="signal-flash"
               />
+              <!-- Steam Train -->
               <g class="train-chug">
                 <rect
                   x="55"
@@ -744,9 +949,10 @@
                   stroke-width="2"
                 />
               </g>
+              <!-- Speech Bubble -->
               <rect
                 x="65"
-                y="34"
+                y="30"
                 width="165"
                 height="26"
                 rx="8"
@@ -756,7 +962,7 @@
               />
               <text
                 x="147"
-                y="52"
+                y="48"
                 text-anchor="middle"
                 font-weight="bold"
                 fill="#78350f"
@@ -764,13 +970,30 @@
               >
                 Red Signal! Auto-Braking!
               </text>
+              <!-- Green Grass & Track inside Stage -->
+              <rect
+                x="12"
+                y="138"
+                width="296"
+                height="40"
+                rx="10"
+                fill="#10b981"
+              />
+              <path
+                d="M35,138 Q40,129 45,138 M185,138 Q190,128 195,138 M285,138 Q290,129 295,138"
+                stroke="#047857"
+                stroke-width="2.5"
+                fill="none"
+                stroke-linecap="round"
+              />
               <line
                 x1="20"
                 y1="136"
                 x2="300"
                 y2="136"
-                stroke="#64748b"
-                stroke-width="4"
+                stroke="#475569"
+                stroke-width="4.5"
+                stroke-linecap="round"
               />
             </svg>
 
@@ -792,25 +1015,26 @@
                 margin-top: 8px;
               "
             >
+              <button
+                type="button"
+                onclick="openScreenshotModal()"
+                class="big-btn blue-btn"
+                style="margin-top: 0"
+              >
+                🖼️ View Code Screenshot
+              </button>
               <a
                 href="train-scratch-code.sb3"
                 download
                 class="big-btn blue-btn"
+                style="margin-top: 0"
               >
-                📦 Download Train Code (.sb3)
-              </a>
-              <a
-                href="train-scratch-guide.png"
-                target="_blank"
-                rel="noopener"
-                class="big-btn blue-btn"
-              >
-                🖼️ View Code Screenshot ↗
+                📦 Starter File (.sb3)
               </a>
             </div>
             <p class="sub-caption">
-              Backdrop: <strong>Blue Sky</strong> • Load in Scratch via
-              <em>File → Load from your computer</em>
+              Backdrop: <strong>Blue Sky</strong> • Load <code>.sb3</code> in
+              Scratch via <em>File → Load from your computer</em>
             </p>
           </div>
         </div>
@@ -2210,6 +2434,30 @@
       </section>
     </main>
 
+    <!-- SCREENSHOT LIGHTBOX OVERLAY -->
+    <div
+      class="modal-overlay"
+      id="screenshotModal"
+      onclick="closeScreenshotModal(event)"
+    >
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>🧩 Scratch Train Code & Blue Sky Stage</h3>
+          <button
+            type="button"
+            class="close-modal-btn"
+            onclick="closeScreenshotModal(event, true)"
+          >
+            ✕ Close
+          </button>
+        </div>
+        <img
+          src="train-scratch-guide.png"
+          alt="Scratch train code blocks and Blue Sky stage preview"
+        />
+      </div>
+    </div>
+
     <footer>
       <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">
         ← Previous
@@ -2304,6 +2552,29 @@
         if (e.key === "ArrowRight") changeSlide(1);
         if (e.key === "ArrowLeft") changeSlide(-1);
       });
+      // Week 1: Tap-to-Reveal Household Sensor Answers
+      function revealSensor(idx, btn) {
+        const card = btn.closest(".box-card");
+        card
+          .querySelectorAll(".sensor-reveal")
+          .forEach((el) => el.classList.remove("active"));
+        card
+          .querySelectorAll(".sensor-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document.getElementById(`sensor-${idx}`).classList.add("active");
+        btn.classList.add("active");
+      }
+
+      // Week 2: Screenshot Pop-Up Overlay
+      function openScreenshotModal() {
+        document.getElementById("screenshotModal").classList.add("open");
+      }
+
+      function closeScreenshotModal(e, force) {
+        if (force || e.target.id === "screenshotModal") {
+          document.getElementById("screenshotModal").classList.remove("open");
+        }
+      }
     </script>
   </body>
 </html>
