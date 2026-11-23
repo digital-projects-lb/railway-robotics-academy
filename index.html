@@ -44,9 +44,7 @@
       </div>
 
       <nav class="week-tabs" id="weekTabs">
-        <button class="tab-btn active" onclick="goToSlide(0)">
-          Start
-        </button>
+        <button class="tab-btn active" onclick="goToSlide(0)">Start</button>
         <button class="tab-btn" onclick="goToSlide(1)">Wk 1: Robotics</button>
         <button class="tab-btn" onclick="goToSlide(2)">Wk 2: Scratch</button>
         <button class="tab-btn" onclick="goToSlide(3)">
@@ -413,7 +411,7 @@
                 Guess the <strong>Input → Brain → Output</strong> for these 3
                 everyday machines, then tap each button to check your answer:
               </p>
-                        <div class="sensor-pills">
+              <div class="sensor-pills">
                 <button class="sensor-btn" onclick="revealSensor(0, this)">
                   🚪 Automatic Shop Door <span class="tap-tag">👆 Check</span>
                 </button>
@@ -424,6 +422,32 @@
                   🍞 Pop-Up Toaster <span class="tap-tag">👆 Check</span>
                 </button>
               </div>
+              <div class="sensor-reveal" id="sensor-0">
+                <strong>🚪 Automatic Shop Door:</strong><br />
+                <strong>1. Input:</strong> Motion sensor above the door spots
+                movement.<br />
+                <strong>2. Brain:</strong> Door controller decides someone is
+                walking up.<br />
+                <strong>3. Output:</strong> Electric motor slides the glass
+                doors open!
+              </div>
+              <div class="sensor-reveal" id="sensor-1">
+                <strong>🧊 Fridge Door Light:</strong><br />
+                <strong>1. Input:</strong> Door-pin switch pops out when you
+                open the fridge.<br />
+                <strong>2. Brain:</strong> Electrical circuit closes
+                automatically.<br />
+                <strong>3. Output:</strong> Inside light globe switches on!
+              </div>
+              <div class="sensor-reveal" id="sensor-2">
+                <strong>🍞 Pop-Up Toaster:</strong><br />
+                <strong>1. Input:</strong> Lever pushed down + heat/timer sensor
+                reaches toast time.<br />
+                <strong>2. Brain:</strong> Timer release latch triggers.<br />
+                <strong>3. Output:</strong> Spring pops the toast up and turns
+                off the heat!
+              </div>
+            </div>
 
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
@@ -2437,9 +2461,7 @@
       <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">
         ← Previous
       </button>
-      <span class="slide-status" id="slideStatus"
-        >Start • Page 1 of 9</span
-      >
+      <span class="slide-status" id="slideStatus">Start • Page 1 of 9</span>
       <button class="nav-btn primary" id="nextBtn" onclick="changeSlide(1)">
         Next →
       </button>
