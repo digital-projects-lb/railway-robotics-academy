@@ -642,22 +642,52 @@ footer {
 }
 
 .sensor-btn {
-  background: #e0f2fe;
-  border: 1.5px solid #38bdf8;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 2px solid #2563eb;
+  border-bottom-width: 4px;
   color: #1e3a8a;
-  padding: 7px 12px;
-  border-radius: 10px;
-  font-size: 0.86rem;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.88rem;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.15s;
+  box-shadow: 0 3px 6px rgba(37, 99, 235, 0.14);
+  transition:
+    transform 0.1s,
+    background 0.15s;
 }
 
-.sensor-btn:hover,
+.tap-tag {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.sensor-btn:hover {
+  background: #eff6ff;
+  transform: translateY(-1px);
+}
+
+.sensor-btn:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
 .sensor-btn.active {
   background: var(--primary);
   border-color: var(--primary);
   color: #ffffff;
+}
+
+.sensor-btn.active .tap-tag {
+  background: #ffffff;
+  color: var(--primary);
 }
 
 .sensor-reveal {

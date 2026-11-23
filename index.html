@@ -413,43 +413,17 @@
                 Guess the <strong>Input → Brain → Output</strong> for these 3
                 everyday machines, then tap each button to check your answer:
               </p>
-              <div class="sensor-pills">
+                        <div class="sensor-pills">
                 <button class="sensor-btn" onclick="revealSensor(0, this)">
-                  🚪 Automatic Shop Door
+                  🚪 Automatic Shop Door <span class="tap-tag">👆 Check</span>
                 </button>
                 <button class="sensor-btn" onclick="revealSensor(1, this)">
-                  🧊 Fridge Door Light
+                  🧊 Fridge Door Light <span class="tap-tag">👆 Check</span>
                 </button>
                 <button class="sensor-btn" onclick="revealSensor(2, this)">
-                  🍞 Pop-Up Toaster
+                  🍞 Pop-Up Toaster <span class="tap-tag">👆 Check</span>
                 </button>
               </div>
-              <div class="sensor-reveal" id="sensor-0">
-                <strong>🚪 Automatic Shop Door:</strong><br />
-                <strong>1. Input:</strong> Motion sensor above the door spots
-                movement.<br />
-                <strong>2. Brain:</strong> Door controller decides someone is
-                walking up.<br />
-                <strong>3. Output:</strong> Electric motor slides the glass
-                doors open!
-              </div>
-              <div class="sensor-reveal" id="sensor-1">
-                <strong>🧊 Fridge Door Light:</strong><br />
-                <strong>1. Input:</strong> Door-pin switch pops out when you
-                open the fridge.<br />
-                <strong>2. Brain:</strong> Electrical circuit closes
-                automatically.<br />
-                <strong>3. Output:</strong> Inside light globe switches on!
-              </div>
-              <div class="sensor-reveal" id="sensor-2">
-                <strong>🍞 Pop-Up Toaster:</strong><br />
-                <strong>1. Input:</strong> Lever pushed down + heat/timer sensor
-                reaches toast time.<br />
-                <strong>2. Brain:</strong> Timer release latch triggers.<br />
-                <strong>3. Output:</strong> Spring pops the toast up and turns
-                off the heat!
-              </div>
-            </div>
 
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
@@ -468,69 +442,95 @@
             <svg
               viewBox="0 0 540 205"
               style="max-width: 500px"
-              aria-label="Three-carriage Robotics Train showing Input, Brain, and Output on green grass"
+              aria-label="Three-carriage Robotics Train reading Input, Brain, and Output from left to right on green grass"
             >
-              <!-- Steam rising from front locomotive chimney (right side) -->
+              <!-- Steam rising from front locomotive chimney (left side) -->
               <circle
-                cx="485"
+                cx="55"
                 cy="36"
                 r="8"
                 fill="#94a3b8"
                 class="chimney-steam-1"
-                style="transform-origin: 485px 36px"
+                style="transform-origin: 55px 36px"
               />
               <circle
-                cx="485"
+                cx="55"
                 cy="36"
                 r="11"
                 fill="#cbd5e1"
                 class="chimney-steam-2"
-                style="transform-origin: 485px 36px"
+                style="transform-origin: 55px 36px"
               />
 
               <g class="train-chug">
-                <!-- CARRIAGE 3 (Left): 3. OUTPUT -->
+                <!-- ENGINE 1 (Left/Front): 1. INPUT -->
+                <polygon points="39,122 18,138 39,138" fill="#ef4444" />
                 <rect
-                  x="20"
-                  y="65"
-                  width="135"
-                  height="75"
+                  x="39"
+                  y="66"
+                  width="115"
+                  height="74"
                   rx="12"
-                  fill="#d1fae5"
-                  stroke="#10b981"
+                  fill="#dbeafe"
+                  stroke="#2563eb"
                   stroke-width="3"
                 />
+                <polygon points="62,66 48,66 50,42 60,42" fill="#1e293b" />
                 <rect
-                  x="28"
-                  y="57"
-                  width="119"
-                  height="8"
+                  x="46"
+                  y="38"
+                  width="18"
+                  height="5"
+                  rx="2"
+                  fill="#f59e0b"
+                />
+                <rect
+                  x="150"
+                  y="50"
+                  width="52"
+                  height="90"
+                  rx="8"
+                  fill="#1d4ed8"
+                />
+                <rect
+                  x="146"
+                  y="44"
+                  width="60"
+                  height="7"
+                  rx="3"
+                  fill="#f59e0b"
+                />
+                <rect
+                  x="160"
+                  y="58"
+                  width="32"
+                  height="22"
                   rx="4"
-                  fill="#047857"
+                  fill="#bae6fd"
                 />
                 <text
-                  x="87"
+                  x="96"
                   y="98"
                   text-anchor="middle"
                   font-weight="bold"
-                  fill="#064e3b"
+                  fill="#1e3a8a"
                   font-size="16"
                 >
-                  3. OUTPUT
+                  1. INPUT
                 </text>
                 <text
-                  x="87"
+                  x="96"
                   y="120"
                   text-anchor="middle"
-                  fill="#047857"
+                  fill="#2563eb"
                   font-size="12"
                 >
-                  Motors & Lights
+                  Sensors
                 </text>
 
                 <!-- Coupling Bar 1 -->
                 <rect
-                  x="155"
+                  x="202"
                   y="118"
                   width="24"
                   height="8"
@@ -538,16 +538,16 @@
                   fill="#334155"
                 />
                 <circle
-                  cx="167"
+                  cx="214"
                   cy="122"
                   r="5"
-                  fill="#f59e0b"
+                  fill="#2563eb"
                   class="signal-flash"
                 />
 
                 <!-- CARRIAGE 2 (Middle): 2. BRAIN -->
                 <rect
-                  x="179"
+                  x="226"
                   y="65"
                   width="135"
                   height="75"
@@ -557,7 +557,7 @@
                   stroke-width="3"
                 />
                 <rect
-                  x="187"
+                  x="234"
                   y="57"
                   width="119"
                   height="8"
@@ -565,7 +565,7 @@
                   fill="#d97706"
                 />
                 <text
-                  x="246"
+                  x="293"
                   y="98"
                   text-anchor="middle"
                   font-weight="bold"
@@ -575,7 +575,7 @@
                   2. BRAIN
                 </text>
                 <text
-                  x="246"
+                  x="293"
                   y="120"
                   text-anchor="middle"
                   fill="#b45309"
@@ -586,7 +586,7 @@
 
                 <!-- Coupling Bar 2 -->
                 <rect
-                  x="314"
+                  x="361"
                   y="118"
                   width="24"
                   height="8"
@@ -594,83 +594,57 @@
                   fill="#334155"
                 />
                 <circle
-                  cx="326"
+                  cx="373"
                   cy="122"
                   r="5"
-                  fill="#2563eb"
+                  fill="#f59e0b"
                   class="signal-flash"
                 />
 
-                <!-- ENGINE 1 (Right/Front): 1. INPUT -->
+                <!-- CARRIAGE 3 (Right): 3. OUTPUT -->
                 <rect
-                  x="338"
-                  y="50"
-                  width="52"
-                  height="90"
-                  rx="8"
-                  fill="#1d4ed8"
-                />
-                <rect
-                  x="334"
-                  y="44"
-                  width="60"
-                  height="7"
-                  rx="3"
-                  fill="#f59e0b"
-                />
-                <rect
-                  x="348"
-                  y="58"
-                  width="32"
-                  height="22"
-                  rx="4"
-                  fill="#bae6fd"
-                />
-                <rect
-                  x="386"
-                  y="66"
-                  width="115"
-                  height="74"
+                  x="385"
+                  y="65"
+                  width="135"
+                  height="75"
                   rx="12"
-                  fill="#dbeafe"
-                  stroke="#2563eb"
+                  fill="#d1fae5"
+                  stroke="#10b981"
                   stroke-width="3"
                 />
-                <polygon points="478,66 492,66 490,42 480,42" fill="#1e293b" />
                 <rect
-                  x="476"
-                  y="38"
-                  width="18"
-                  height="5"
-                  rx="2"
-                  fill="#f59e0b"
+                  x="393"
+                  y="57"
+                  width="119"
+                  height="8"
+                  rx="4"
+                  fill="#047857"
                 />
-                <polygon points="501,122 522,138 501,138" fill="#ef4444" />
                 <text
-                  x="443"
+                  x="452"
                   y="98"
                   text-anchor="middle"
                   font-weight="bold"
-                  fill="#1e3a8a"
+                  fill="#064e3b"
                   font-size="16"
                 >
-                  1. INPUT
+                  3. OUTPUT
                 </text>
                 <text
-                  x="443"
+                  x="452"
                   y="120"
                   text-anchor="middle"
-                  fill="#2563eb"
+                  fill="#047857"
                   font-size="12"
                 >
-                  Sensors
+                  Motors & Lights
                 </text>
               </g>
 
               <!-- Spinning Wheels under all 3 Carriages -->
               <g class="wheel-spin">
                 <circle
-                  cx="52"
+                  cx="64"
                   cy="148"
                   r="14"
                   fill="#334155"
@@ -680,7 +654,7 @@
               </g>
               <g class="wheel-spin">
                 <circle
-                  cx="122"
+                  cx="118"
                   cy="148"
                   r="14"
                   fill="#334155"
@@ -690,27 +664,7 @@
               </g>
               <g class="wheel-spin">
                 <circle
-                  cx="211"
-                  cy="148"
-                  r="14"
-                  fill="#334155"
-                  stroke="#f59e0b"
-                  stroke-width="3"
-                />
-              </g>
-              <g class="wheel-spin">
-                <circle
-                  cx="281"
-                  cy="148"
-                  r="14"
-                  fill="#334155"
-                  stroke="#f59e0b"
-                  stroke-width="3"
-                />
-              </g>
-              <g class="wheel-spin">
-                <circle
-                  cx="364"
+                  cx="176"
                   cy="146"
                   r="16"
                   fill="#334155"
@@ -720,7 +674,7 @@
               </g>
               <g class="wheel-spin">
                 <circle
-                  cx="422"
+                  cx="258"
                   cy="148"
                   r="14"
                   fill="#334155"
@@ -730,7 +684,27 @@
               </g>
               <g class="wheel-spin">
                 <circle
-                  cx="476"
+                  cx="328"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="417"
+                  cy="148"
+                  r="14"
+                  fill="#334155"
+                  stroke="#f59e0b"
+                  stroke-width="3"
+                />
+              </g>
+              <g class="wheel-spin">
+                <circle
+                  cx="487"
                   cy="148"
                   r="14"
                   fill="#334155"
@@ -765,6 +739,7 @@
                 stroke-linecap="round"
               />
             </svg>
+
             <p class="caption">
               The 3-Carriage Robotics Train: Input → Brain → Output
             </p>
