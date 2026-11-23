@@ -572,76 +572,99 @@
               <span class="pill">Week 2 • 45 Mins • Guide</span>
               <h1>Scratch Level-Crossing Train</h1>
               <p>
-                Code a steam train that drives along the tracks, blows its
-                whistle, and stops automatically at red signals.
+                Code a train that drives left and right, blows its whistle, and
+                stops automatically at a red signal!
               </p>
               <div class="teacher-note">
                 <strong>👩🏾‍🏫 2-Min Mini-Lecture: How Code Makes Decisions</strong>
                 <ul>
                   <li>
-                    <strong>Events (Yellow blocks):</strong> "These are the
-                    'When' triggers—like pressing a doorbell. When you press the
-                    right arrow, the train wakes up."
+                    <strong>Events (Yellow):</strong> Triggers that start code
+                    when a key or the Green Flag is pressed.
                   </li>
                   <li>
-                    <strong>Forever Loops (Orange):</strong> "Robots don't check
-                    their sensors once and go to sleep—a
-                    <code>forever</code> loop makes the train check the track
-                    hundreds of times every second."
+                    <strong>Forever Loops (Orange):</strong> Keeps the train's
+                    safety sensor checking hundreds of times every second.
                   </li>
                   <li>
-                    <strong>If / Then:</strong> "This is how a train thinks:
-                    <em>IF</em> touching red signal, <em>THEN</em> apply the
-                    brakes!"
+                    <strong>If / Then:</strong> How a train thinks:
+                    <em>IF</em> touching the red signal, <em>THEN</em> apply the
+                    brakes!
+                  </li>
+                  <li>
+                    <strong>Tip:</strong> Make sure the Signal is created as a
+                    <strong>new sprite</strong> (bottom-right Paintbrush), not a
+                    second costume!
                   </li>
                 </ul>
               </div>
             </div>
 
             <div class="box-card">
-              <h3>Part 1: Train Throttle & Whistle (25 mins)</h3>
-              <ul>
+              <h3>Part 1: Train Sprite, Controls & Horn (25 mins)</h3>
+              <ol>
                 <li>
-                  <strong>Events (Yellow):</strong>
-                  <code>when [right arrow] key pressed</code>
+                  <strong>Backdrop & Train:</strong> Pick the
+                  <strong>Blue Sky</strong> backdrop (bottom-right). Delete the
+                  default cat (bin icon), hover over
+                  <strong>Choose a Sprite</strong> → click
+                  <strong>Paint</strong> (or <strong>Upload</strong>) for your
+                  train, and set <strong>Direction</strong> to Left/Right
+                  (<code>↔</code>).
                 </li>
                 <li>
-                  <strong>Motion (Blue):</strong>
-                  <code>point in direction (90)</code> +
-                  <code>move (10) steps</code>
+                  <strong>Horn Sound:</strong> Open the
+                  <strong>Sounds</strong> tab → pick a <strong>Horn</strong> (or
+                  record a <em>"Choo-choo!"</em>), then return to
+                  <strong>Code</strong>.
                 </li>
                 <li>
-                  Add <strong>Left (-90)</strong>, plus
+                  <strong>Drive Right:</strong>
+                  <code>when [right arrow] key pressed</code> →
+                  <code>point in direction (90)</code> →
+                  <code>move (10) steps</code>.
+                </li>
+                <li>
+                  <strong>Drive Left & Whistle:</strong> Repeat for
+                  <code>left arrow</code> with direction <code>-90</code>, plus
                   <code>when [space] key pressed</code> →
-                  <code>play sound [train whistle]</code>.
+                  <code>start sound [Horn]</code>.
                 </li>
-              </ul>
+              </ol>
             </div>
 
             <div class="box-card">
-              <h3>Part 2: Automatic Red Signal Brake (20 mins)</h3>
-              <ul>
+              <h3>Part 2: Red Signal & Auto-Brake (20 mins)</h3>
+              <ol>
                 <li>
-                  Draw a <strong>Red Signal Light</strong> sprite on the track
-                  ahead.
+                  <strong>New Signal Sprite:</strong> Hover over
+                  <strong>Choose a Sprite</strong> (bottom-right) → click the
+                  <strong>Paintbrush</strong>, draw a red stop sign, name it
+                  <code>Signal</code>, and drag it to the right side of the
+                  stage.
                 </li>
                 <li>
-                  Use <strong>Control (Orange):</strong> <code>forever</code> +
-                  <code>if &lt;touching Signal?&gt; then</code>
+                  <strong>Select Train & Add Sensor:</strong> Click back on your
+                  <strong>Train sprite</strong>, then snap together:
+                  <code>when green flag clicked</code> → <code>forever</code> →
+                  <code>if &lt;touching [Signal]?&gt; then</code>.
                 </li>
                 <li>
-                  Say <code>"Red Signal! Stopping!"</code> and bounce back
-                  <code>-15 steps</code>.
+                  <strong>Auto-Reverse:</strong> Inside the
+                  <code>if</code> mouth, put
+                  <code>say [Red Signal! Stopping!] for (2) seconds</code> and
+                  <code>move (-20) steps</code>. Click the
+                  <strong>Green Flag</strong> to test!
                 </li>
-              </ul>
+              </ol>
             </div>
 
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
               <p>
-                <strong>Train flipped upside down?</strong> Click
-                <em>Direction</em> below the stage and tap the middle
-                <strong>Left/Right (↔)</strong> icon. Save at home via
+                <strong>Code disappeared?</strong> Each sprite has its own code
+                page—click your <strong>Train thumbnail</strong> in the
+                bottom-right box to bring your blocks back! Save via
                 <em>File → Save to your computer</em>.
               </p>
             </div>
@@ -750,6 +773,7 @@
                 stroke-width="4"
               />
             </svg>
+
             <a
               href="https://scratch.mit.edu/projects/editor/"
               target="_blank"
@@ -758,9 +782,35 @@
             >
               🚀 Open Scratch Editor Directly ↗
             </a>
+
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: center;
+                margin-top: 8px;
+              "
+            >
+              <a
+                href="train-scratch-code.sb3"
+                download
+                class="big-btn blue-btn"
+              >
+                📦 Download Train Code (.sb3)
+              </a>
+              <a
+                href="train-scratch-guide.png"
+                target="_blank"
+                rel="noopener"
+                class="big-btn blue-btn"
+              >
+                🖼️ View Code Screenshot ↗
+              </a>
+            </div>
             <p class="sub-caption">
-              Direct link: <code>scratch.mit.edu/projects/editor/</code> (No
-              login needed)
+              Backdrop: <strong>Blue Sky</strong> • Load in Scratch via
+              <em>File → Load from your computer</em>
             </p>
           </div>
         </div>
