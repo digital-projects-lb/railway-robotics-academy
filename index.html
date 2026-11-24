@@ -1654,7 +1654,8 @@
               🎙️ Open Sound AI Lab ↗
             </a>
             <p class="sub-caption">
-              Direct link: <code>://withgoogle.com</code>
+              Direct link:
+              <code>:https://teachablemachine.withgoogle.com/train/audio</code>
             </p>
           </div>
         </div>
@@ -1669,20 +1670,30 @@
               <h1>Putting It All Together for Camp!</h1>
               <p>
                 You now know how sensors, code, circuits, and AI work together.
-                Let's do one final Scratch train mission and get ready for a
-                great camp day!
+                Let's build one final Scratch train game and run through your
+                pre-camp engineering checklist!
               </p>
               <div class="teacher-note">
-                <strong>👩🏾‍🏫 2-Min Mini-Lecture: Ready for Camp</strong>
+                <strong
+                  >👩🏾‍🏫 2-Min Mini-Lecture: Thinking Like an Engineer</strong
+                >
                 <ul>
                   <li>
-                    <strong>Confidence boost:</strong> "Remind him he already
-                    understands sensors, algorithms, circuits, and AI—more than
-                    most first-time campers!"
+                    <strong>What a Variable is:</strong> "A
+                    <strong>variable</strong> is a labelled memory box inside
+                    the computer that keeps score—just like a train conductor's
+                    passenger counter."
                   </li>
                   <li>
-                    <strong>Equipment:</strong> "Camp laptops are arranged, so
-                    he just needs to bring his curiosity."
+                    <strong>Normalising bugs:</strong> "Even senior engineers at
+                    Sydney Metro spend half their day fixing tiny mistakes
+                    called <em>bugs</em>. Getting stuck doesn't mean you're bad
+                    at coding—it means you're actually engineering!"
+                  </li>
+                  <li>
+                    <strong>Camp confidence:</strong> "Remind him he already
+                    understands circuits, sensors, variables, and AI—he's
+                    walking into camp with a massive head start."
                   </li>
                 </ul>
               </div>
@@ -1690,31 +1701,63 @@
 
             <div class="box-card">
               <h3>Part 1: Sydney Express Passenger Game (25 mins)</h3>
-              <ul>
+              <ol>
                 <li>
-                  In Scratch, click
-                  <strong>Variables → Make a Variable</strong> named
+                  <strong>Setup Train Controls:</strong> Open Scratch, load your
+                  train sprite, and add 4-way arrow movement (<code>up</code>,
+                  <code>down</code>, <code>left</code>,
+                  <code>right</code> arrows using <code>change x by</code> and
+                  <code>change y by</code>).
+                </li>
+                <li>
+                  <strong>Make a Score Box:</strong> Click
+                  <strong>Variables</strong> (dark orange) →
+                  <strong>Make a Variable</strong> → name it
                   <code>Passengers</code>.
                 </li>
                 <li>
-                  Add a <strong>Station Platform</strong> sprite that jumps to a
-                  <code>go to [random position]</code> whenever your train
-                  arrives, adding <code>+1</code> passenger!
+                  <strong>Draw a Station Platform:</strong> Hover over
+                  <strong>Choose a Sprite</strong> → click
+                  <strong>Paintbrush</strong>, draw a yellow platform rectangle,
+                  and name it <code>Station</code>.
                 </li>
-              </ul>
+                <li>
+                  <strong>Code the Pickup Loop:</strong> Select your
+                  <strong>Station sprite</strong> and snap together:
+                  <code>when green flag clicked</code> →
+                  <code>set [Passengers] to (0)</code> → <code>forever</code> →
+                  <code>if &lt;touching [Train]?&gt; then</code>.
+                </li>
+                <li>
+                  <strong>Score & Teleport:</strong> Inside the
+                  <code>if</code> mouth, put
+                  <code>change [Passengers] by (1)</code>,
+                  <code>start sound [Pop]</code>, and
+                  <code>go to [random position]</code>. Press the
+                  <strong>Green Flag</strong> and see how many passengers you
+                  can pick up in 30 seconds!
+                </li>
+              </ol>
             </div>
 
             <div class="box-card">
-              <h3>Part 2: Your Calm Camp Superpowers (20 mins)</h3>
+              <h3>Part 2: Pro Engineer Habits for Camp (20 mins)</h3>
               <ul>
                 <li>
-                  <strong>Go at your own pace:</strong> Coding takes trial and
-                  error—bugs are normal!
+                  <strong>Debug One Step at a Time:</strong> When a circuit or
+                  script doesn't work first try, check your wires and blocks
+                  from start to finish—finding bugs is half the job!
                 </li>
                 <li>
-                  <strong>Quiet breaks are okay:</strong> If the room or buzzers
-                  feel loud, it's always fine to put on headphones or ask a
-                  teacher for a quiet breather.
+                  <strong>Manage Your Focus Zone:</strong> Robotics rooms get
+                  busy with buzzers and motors. Taking a quick breather,
+                  stepping outside for water, or wearing headphones helps you
+                  think clearly.
+                </li>
+                <li>
+                  <strong>Ask Good Questions:</strong> Real engineers never
+                  build alone—if you get stuck on a tricky step, ask a camp
+                  mentor to troubleshoot with you.
                 </li>
               </ul>
             </div>
@@ -1722,16 +1765,21 @@
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
               <p>
-                🎉 <strong>You are ready!</strong> Remember: every real engineer
-                asks questions and tests ideas one small step at a time.
+                <strong>Score jumping by +10 at once?</strong> Make sure
+                <code>go to [random position]</code> is placed
+                <strong>inside</strong> the
+                <code>if &lt;touching [Train]?&gt;</code> block right below
+                <code>change [Passengers] by (1)</code> so the station jumps
+                away immediately after each pickup!
               </p>
             </div>
           </div>
-
           <div class="rhs-stage">
             <svg
+              id="campTrophy"
+              class="trophy-locked"
               viewBox="0 0 280 185"
-              aria-label="Achievement Trophy and Ready for Camp Badge"
+              style="max-width: 260px"
             >
               <circle
                 cx="140"
@@ -1742,24 +1790,24 @@
                 stroke-width="3"
               />
               <path
+                class="trophy-cup"
                 d="M115,60 L165,60 L158,100 C155,112 125,112 122,100 Z"
-                fill="#f59e0b"
               />
               <path
+                class="trophy-handle"
                 d="M115,68 C100,68 100,88 117,88"
                 fill="none"
-                stroke="#d97706"
                 stroke-width="5"
                 stroke-linecap="round"
               />
               <path
+                class="trophy-handle"
                 d="M165,68 C180,68 180,88 163,88"
                 fill="none"
-                stroke="#d97706"
                 stroke-width="5"
                 stroke-linecap="round"
               />
-              <rect x="134" y="108" width="12" height="16" fill="#d97706" />
+              <rect class="trophy-cup" x="134" y="108" width="12" height="16" />
               <rect
                 x="120"
                 y="124"
@@ -1799,12 +1847,46 @@
                 ENGINEER
               </text>
             </svg>
-            <p class="caption">
-              🎉 Achievement Unlocked: Ready for Robotics Camp!
+
+            <p class="caption" id="trophyCaption">
+              🔒 Locked Badge (0 of 3 Complete)
             </p>
-            <p class="sub-caption">
-              Take a deep breath, have fun building, and enjoy every moment.
-            </p>
+
+            <div class="checklist-box">
+              <label class="check-item">
+                <input
+                  type="checkbox"
+                  class="camp-check"
+                  onchange="updateTrophy()"
+                />
+                <span>Built the Sydney Express Passenger Game</span>
+              </label>
+              <label class="check-item">
+                <input
+                  type="checkbox"
+                  class="camp-check"
+                  onchange="updateTrophy()"
+                />
+                <span>Tested variables &amp; random station jumps</span>
+              </label>
+              <label class="check-item">
+                <input
+                  type="checkbox"
+                  class="camp-check"
+                  onchange="updateTrophy()"
+                />
+                <span>Reviewed my Pro Engineer Habits for Camp</span>
+              </label>
+            </div>
+
+            <a
+              href="https://scratch.mit.edu/projects/editor/"
+              target="_blank"
+              rel="noopener"
+              class="big-btn green-btn"
+            >
+              🚀 Open Scratch for Final Mission ↗
+            </a>
           </div>
         </div>
       </section>
@@ -2689,6 +2771,25 @@
       function closeScreenshotModal(e, force) {
         if (force || e.target.id === "screenshotModal") {
           document.getElementById("screenshotModal").classList.remove("open");
+        }
+      }
+
+      // Week 6: Unlock Gold Trophy when all 3 boxes are checked
+      function updateTrophy() {
+        const checks = document.querySelectorAll(".camp-check");
+        const done = Array.from(checks).filter((c) => c.checked).length;
+        const trophy = document.getElementById("campTrophy");
+        const caption = document.getElementById("trophyCaption");
+
+        if (done === checks.length) {
+          trophy.classList.remove("trophy-locked");
+          trophy.classList.add("trophy-unlocked");
+          caption.textContent =
+            "🎉 Achievement Unlocked: AI Robotics Train Engineer!";
+        } else {
+          trophy.classList.remove("trophy-unlocked");
+          trophy.classList.add("trophy-locked");
+          caption.textContent = `🔒 Locked Badge (${done} of ${checks.length} Complete)`;
         }
       }
     </script>

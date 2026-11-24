@@ -763,3 +763,55 @@ footer {
   border-radius: 10px;
   border: 1px solid var(--border);
 }
+/* Week 6: Interactive Camp Readiness Checklist & Locked Trophy */
+.trophy-locked .trophy-cup {
+  fill: #cbd5e1;
+  transition: fill 0.4s ease;
+}
+
+.trophy-locked .trophy-handle {
+  stroke: #94a3b8;
+  transition: stroke 0.4s ease;
+}
+
+.trophy-unlocked .trophy-cup {
+  fill: #f59e0b;
+}
+
+.trophy-unlocked .trophy-handle {
+  stroke: #d97706;
+}
+
+.checklist-box {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1.5px solid #93c5fd;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.check-item:last-child {
+  border-bottom: none;
+}
+
+.check-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green-dark);
+  cursor: pointer;
+}
