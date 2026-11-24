@@ -1272,7 +1272,7 @@
                   />
                 </g>
                 <animateMotion
-                  dur="11s"
+                  dur="20s"
                   repeatCount="indefinite"
                   rotate="auto"
                   path="M 39,150 L 39,25 L 185,25 L 185,150 Z"
@@ -1308,8 +1308,9 @@
               <span class="pill">Week 4 • 45 Mins • Guide</span>
               <h1>Tinkercad Railway Crossing</h1>
               <p>
-                Wire flashing warning signals and a motorised boom gate safely
-                on screen before touching real hardware at camp!
+                Wire switching warning lights (including your
+                <strong>Yellow LED</strong>!) and a motorised boom gate safely
+                on screen before touching real hardware.
               </p>
               <div class="teacher-note">
                 <strong
@@ -1323,54 +1324,77 @@
                     breaks."
                   </li>
                   <li>
-                    <strong>Two Outputs Today:</strong> "First we'll use
-                    electricity to make <strong>light</strong> (an LED signal),
-                    and then we'll use electricity to make
-                    <strong>movement</strong> (a spinning motor for the boom
-                    gate)!"
+                    <strong>How the Slide Switch works:</strong> "The middle pin
+                    (<em>Common</em>) brings power in, and sliding the switch
+                    sends power to either the left pin (Yellow/Green) or the
+                    right pin (Red)!"
                   </li>
                   <li>
-                    <strong>Home Access:</strong> "Set up a free Tinkercad
-                    <em>Educator Class</em> so he can log in at home with a
-                    Class Code—no email needed."
+                    <strong>Home Access:</strong> "Use your Tinkercad Class Code
+                    + Nickname so he can log in at home without needing an
+                    email."
                   </li>
                 </ul>
               </div>
             </div>
 
             <div class="box-card">
-              <h3>Part 1: Flashing Warning Lights (25 mins)</h3>
-              <ul>
+              <h3>Part 1: Switching Railway Signals (25 mins)</h3>
+              <ol>
                 <li>
-                  Drag out a <strong>Coin Cell Battery</strong>, a
-                  <strong>Resistor</strong>, and a <strong>Red LED</strong>.
+                  <strong>New Circuit:</strong> In Tinkercad, click
+                  <strong>+ Create → Circuit</strong>. Search and drag out a
+                  <strong>Coin Cell 3V Battery</strong>, a
+                  <strong>Slide Switch</strong>, a <strong>Red LED</strong>, and
+                  a <strong>Yellow LED</strong> (click the LED and change its
+                  Colour dropdown to <em>Yellow</em>!).
                 </li>
                 <li>
-                  Connect <code>+</code> to the bent leg (Anode) and click
-                  <strong>Start Simulation</strong>.
+                  <strong>Wire Power In:</strong> Click the battery's
+                  <strong>Positive (+)</strong> terminal and click the
+                  <strong>middle pin (Common)</strong> of the Slide Switch to
+                  draw a red wire.
                 </li>
                 <li>
-                  Add a <strong>Slide Switch</strong> to toggle between Red
-                  (Stop) and Green (Go) lights!
+                  <strong>Wire Both Lights:</strong> Connect the switch's
+                  <strong>left pin</strong> to the Yellow LED's bent leg
+                  (<em>Anode</em>), and the <strong>right pin</strong> to the
+                  Red LED's bent leg (<em>Anode</em>).
                 </li>
-              </ul>
+                <li>
+                  <strong>Complete the Loop:</strong> Connect both LEDs'
+                  straight legs (<em>Cathode</em>) back to the battery's
+                  <strong>Negative (-)</strong> terminal, then click
+                  <strong>Start Simulation</strong> and click the switch!
+                </li>
+              </ol>
             </div>
 
             <div class="box-card">
               <h3>Part 2: Boom Gate Motor (20 mins)</h3>
-              <p>
-                Connect a <strong>DC Motor</strong> or
-                <strong>Micro Servo</strong> to swing the railway boom gate arm
-                up and down!
-              </p>
+              <ol>
+                <li>
+                  <strong>Add Parts:</strong> Drag out a
+                  <strong>1.5V AA Battery</strong>, a
+                  <strong>Pushbutton</strong>, and a <strong>DC Motor</strong>.
+                </li>
+                <li>
+                  <strong>Wire the Gate:</strong> Connect Battery
+                  <code>+</code> → Pushbutton → Motor Terminal 1, and Motor
+                  Terminal 2 → Battery <code>-</code>. Click
+                  <strong>Start Simulation</strong> and hold the button to spin
+                  the boom gate!
+                </li>
+              </ol>
             </div>
 
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
               <p>
-                <strong>Need to turn a part?</strong> Click any component in
-                Tinkercad and press the <code>R</code> key on your keyboard to
-                rotate it neatly.
+                <strong>LED not lighting up?</strong> Check that the wire goes
+                to the <strong>bent leg (Anode +)</strong> of the
+                LED—electricity only flows one way through an LED! Press
+                <code>R</code> to rotate any part.
               </p>
             </div>
           </div>
