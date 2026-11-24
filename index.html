@@ -1529,8 +1529,8 @@
               <p>
                 Regular code follows strict rules.
                 <strong>Artificial Intelligence (AI)</strong> learns from
-                examples—just like learning the difference between a green
-                signal and a red signal!
+                examples—just like learning to tell a train whistle apart from a
+                crossing bell!
               </p>
               <div class="teacher-note">
                 <strong
@@ -1542,17 +1542,20 @@
                     <strong>Regular Code vs. AI:</strong> "In Scratch, we wrote
                     exact rules. With
                     <strong>Artificial Intelligence (AI)</strong>, we don't
-                    write rules—we show the computer lots of examples and let it
+                    write rules—we give the computer sound examples and let it
                     spot patterns on its own!"
                   </li>
                   <li>
-                    <strong>How Audio AI hears:</strong> "The computer turns
-                    your clap into a sound-wave picture and compares it to the
-                    examples you recorded."
+                    <strong>What the colourful waves are:</strong> "Teachable
+                    Machine turns every sound into a picture (called a
+                    <em>spectrogram</em>) and compares new sounds to your saved
+                    examples."
                   </li>
                   <li>
-                    <strong>Quiz Answer:</strong> "B is correct—AI only knows
-                    what we show it during training!"
+                    <strong>Important UI tip:</strong> "Background Noise MUST
+                    record for a full <strong>20 seconds</strong> before you
+                    click <em>Extract Sample</em>, otherwise the Train button
+                    stays greyed out!"
                   </li>
                 </ul>
               </div>
@@ -1562,36 +1565,62 @@
               <h3>Part 1: Train a Clapping Train Controller (30 mins)</h3>
               <ol>
                 <li>
-                  Open <strong>Teachable Machine (Audio)</strong> and record 8
-                  seconds of quiet room noise for <em>Background Noise</em>.
+                  <strong>Open & Allow Mic:</strong> Click
+                  <strong>Open Sound AI Lab ↗</strong> on the right and click
+                  <strong>Allow</strong> when the browser asks to use your
+                  microphone.
                 </li>
                 <li>
-                  Create two classes: <strong>"Clap = GO"</strong> and
-                  <strong>"Tap Table = STOP"</strong>, and record 8 samples of
-                  each!
+                  <strong>Record Silence (20 secs):</strong> In the
+                  <em>Background Noise</em> box, click <strong>Mic</strong>,
+                  stay completely quiet for the full
+                  <strong>20-second</strong> timer, then click
+                  <strong>Extract Sample</strong>.
                 </li>
                 <li>
-                  Click <strong>Train Model</strong> and test if the AI hears
-                  the difference!
+                  <strong>Class 1 ("Clap = GO"):</strong> Click the pencil icon
+                  next to <em>Class 2</em> and rename it <code>Clap = GO</code>.
+                  Click <strong>Mic</strong>, clap steadily for 8–10 seconds,
+                  then click <strong>Extract Sample</strong> (you need at least
+                  <strong>8 samples</strong>).
+                </li>
+                <li>
+                  <strong>Class 2 ("Tap Table = STOP"):</strong> Click
+                  <strong>+ Add a class</strong> below, name it
+                  <code>Tap Table = STOP</code>, click <strong>Mic</strong>, tap
+                  the table for 8–10 seconds, and click
+                  <strong>Extract Sample</strong>.
+                </li>
+                <li>
+                  <strong>Train & Test:</strong> Click
+                  <strong>Train Model</strong> in the middle column (keep this
+                  tab open while it loads!). Watch the live bars on the right
+                  jump to <strong>100%</strong> when you clap or tap!
                 </li>
               </ol>
             </div>
 
             <div class="box-card">
-              <h3>Part 2: Brain-Teaser Challenge (15 mins)</h3>
-              <p>
-                Try the interactive AI question on the right! See if you can
-                figure out why engineers train AI in lots of different
-                conditions.
-              </p>
+              <h3>Part 2: Try to Trick Your AI & Quiz (15 mins)</h3>
+              <ul>
+                <li>
+                  <strong>Stress-Test:</strong> Try clapping very softly,
+                  clapping from across the room, or talking—watch the percentage
+                  bar to see when the AI gets confused!
+                </li>
+                <li>
+                  <strong>Engineer Challenge:</strong> Answer the dark-tunnel
+                  quiz on the right.
+                </li>
+              </ul>
             </div>
 
             <div class="box-card hint-box">
               <h3>💡 Hints</h3>
               <p>
-                <strong>AI unsure?</strong> Make sure everyone stays quiet while
-                recording <em>Background Noise</em> so the AI knows what silence
-                sounds like.
+                <strong>Train Model button greyed out?</strong> Check that
+                <em>Background Noise</em> has at least 20 samples and both of
+                your sound classes have at least 8 samples each.
               </p>
             </div>
           </div>
