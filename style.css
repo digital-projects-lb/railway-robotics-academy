@@ -815,3 +815,36 @@ footer {
   accent-color: var(--green-dark);
   cursor: pointer;
 }
+/* Week 6: Slow Celebration Sparkles (Only visible when unlocked) */
+.trophy-sparkles {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.trophy-unlocked .trophy-sparkles {
+  opacity: 1;
+}
+
+.sparkle-star-1 {
+  animation: slowTwinkle 2.6s ease-in-out infinite;
+}
+
+.sparkle-star-2 {
+  animation: slowTwinkle 2.6s ease-in-out infinite 0.9s;
+}
+
+.sparkle-star-3 {
+  animation: slowTwinkle 2.6s ease-in-out infinite 1.8s;
+}
+
+@keyframes slowTwinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
