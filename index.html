@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Railway Robotics Academy | Junior Engineer Prep</title>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-677PXV4316"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-677PXV4316");
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=11" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -1512,9 +1526,7 @@
             >
               ⚡ Open Tinkercad Circuits ↗
             </a>
-            <p class="sub-caption">
-              Direct link: <code>://tinkercad.com</code>
-            </p>
+            <p class="sub-caption">Direct link: <code>tinkercad.com</code></p>
           </div>
         </div>
       </section>
@@ -1655,7 +1667,7 @@
             </a>
             <p class="sub-caption">
               Direct link:
-              <code>:https://teachablemachine.withgoogle.com/train/audio</code>
+              <code>https://teachablemachine.withgoogle.com/train/audio</code>
             </p>
           </div>
         </div>
@@ -2714,6 +2726,12 @@
     </footer>
 
     <script>
+      function trackAcademyEvent(eventName, params = {}) {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", eventName, params);
+        }
+      }
+
       const slides = document.querySelectorAll(".slide");
       const tabs = document.querySelectorAll(".tab-btn");
       const statusText = document.getElementById("slideStatus");
@@ -2750,6 +2768,11 @@
         prevBtn.disabled = current === 0;
         nextBtn.textContent =
           current === slides.length - 1 ? "All Done! 🎉" : "Next →";
+
+        trackAcademyEvent("view_academy_slide", {
+          slide_number: current + 1,
+          slide_title: titles[current],
+        });
       }
 
       function changeSlide(step) {
@@ -2769,6 +2792,13 @@
           .forEach((el) => el.classList.remove("active"));
         document.getElementById(`${prefix}-${idx}`).classList.add("active");
         btn.classList.add("active");
+
+        const itemLabel =
+          btn.childNodes[0]?.textContent?.trim() || `${prefix}_${idx}`;
+        trackAcademyEvent("select_academy_item", {
+          section_type: prefix === "proj" ? "project" : "resource",
+          item_title: itemLabel,
+        });
       }
 
       function checkQuiz(btn, isCorrect) {
@@ -2789,6 +2819,10 @@
           feedback.textContent =
             "❌ Not quite! Remember: AI only knows what we show it during training. Try another option!";
         }
+        trackAcademyEvent("answer_academy_quiz", {
+          answer_text: btn.textContent.trim(),
+          is_correct: isCorrect,
+        });
       }
 
       document.addEventListener("keydown", (e) => {
@@ -2806,6 +2840,11 @@
           .forEach((b) => b.classList.remove("active"));
         document.getElementById(`sensor-${idx}`).classList.add("active");
         btn.classList.add("active");
+
+        trackAcademyEvent("reveal_sensor_hint", {
+          sensor_name:
+            btn.childNodes[0]?.textContent?.trim() || `sensor_${idx}`,
+        });
       }
 
       // Week 2: Screenshot Pop-Up Overlay
@@ -2836,6 +2875,11 @@
           trophy.classList.add("trophy-locked");
           caption.textContent = `🔒 Locked Badge (${done} of ${checks.length} Complete)`;
         }
+
+        trackAcademyEvent("update_camp_checklist", {
+          completed_count: done,
+          trophy_unlocked: done === checks.length,
+        });
       }
     </script>
   </body>
