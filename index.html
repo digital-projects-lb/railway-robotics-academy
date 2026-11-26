@@ -15,6 +15,11 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
+      const academyRole =
+        new URLSearchParams(window.location.search).get("teacher") === "1"
+          ? "teacher"
+          : "student";
+      gtag("set", "user_properties", { user_role: academyRole });
       gtag("config", "G-677PXV4316");
     </script>
 
